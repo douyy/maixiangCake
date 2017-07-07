@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="stylesheets/style.css">
+</head>
+<body ng-app="app">
+    <div ng-view>
+
+    </div>
+
+<script src="javascripts/angular.min.js"></script>
+<script src="javascripts/angular-route.min.js"></script>
+<script>
+    var appModule = angular.module('app',['ngRoute']);
+
+    appModule.config(function($routeProvider){
+        $routeProvider.when('/',{
+            templateUrl:'birthday.html',
+            controller:'birthdayCtrl'
+        }).when('/detail/:id',{
+            templateUrl:'bdetail.html',
+            controller:'detailCtrl'
+        })
+    })
+    appModule.controller('birthdayCtrl',function($scope,$http){
+        $http.get('/birthday').then(function(res){
+            //console.log(res.data.data);
+            if(res.data.success){
+                $scope.birthday = res.data.data;
+            }
+        });
+        $scope.type =  function(data){
+            $scope.d = data;
+            console.log($scope.d);
+        }
+        $scope.type2 =  function(data){
+            $scope.d2 = data;
+            console.log($scope.d2);
+        }
+        $scope.type3 =  function(data){
+            $scope.d3 = data;
+        }
+        $scope.type4 =  function(data){
+            $scope.d4 = data;
+        }
+
+    });
+
+    appModule.controller('detailCtrl',function($scope,$http,$routeParams){
+        //console.log($routeParams.id);
+        var id = $routeParams.id;
+        $http.get('/birthday/'+id).then(function(res){
+            if(res.data.success){
+                console.log(res.data.data);
+                $scope.detail = res.data.data[0];
+            }
+        });
+    })
+</script>
+</body>
+</html>
