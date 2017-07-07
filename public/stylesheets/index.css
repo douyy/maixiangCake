@@ -1,0 +1,502 @@
+*{
+    padding:0;
+    margin:0;
+}
+body{
+    padding-top:20px;
+}
+/*公共类*/
+a{
+    text-decoration:none;
+}
+/*header*/
+header{
+    width:100%;
+    height:30px;
+    background-color: #f1f1f1;
+    position:fixed;
+    top:0;
+}
+header .inner_c{
+    width:1200px;
+    height:30px;
+    margin:0 auto;
+}
+header .inner_c .header_left{
+    width:600px;
+    float:left;
+}
+header .inner_c .header_left p{
+    display:inline;
+    line-height:30px;
+    color:#735749;
+    font-size:13px;
+}
+header .inner_c .header_left p:last-child{
+    padding-left:5px;
+}
+header .inner_c .header_left a{
+    color:#c00;
+}
+header .inner_c .header_right{
+    width:600px;
+    float:left;
+}
+header .inner_c .header_right ul{
+    margin-left:140px;
+}
+header .inner_c .header_right ul li{
+    float:left;
+    line-height:30px;
+}
+header .inner_c .header_right ul li.neirong{
+    width:62px;
+}
+header .inner_c .header_right ul li.nr{
+    padding-right:10px;
+}
+header .inner_c .header_right ul li.line{
+    margin-right:10px;
+    color:#735749;
+}
+header .inner_c .header_right ul li a{
+    font-size:12px;
+    color:#735749;
+    position:relative;
+}
+header .inner_c .header_right ul li:nth-child(1) a::after{
+    content:'';
+    position:absolute;
+    right:-10px;
+    top:5px;
+    width:7px;
+    height:6px;
+    background: url(/images/sanjiao.jpg);
+}
+header .inner_c .header_right ul li a.hov:hover{
+    color:#990000;
+}
+header .inner_c .header_right ul li a.red{
+    color:#c00;
+}
+header .inner_c .header_right ul li.nr .list{
+    font-size:12px;
+    margin-top:3px;
+    position: relative;
+    left:-150px;
+    width:83px;
+    display:none;
+}
+header .inner_c .header_right ul li .list li{
+    line-height:20px;
+    width:83px;
+    height:20px;
+    text-align:center;
+    position:relative;
+    z-index:2;
+    background-color: #fff;
+}
+header .inner_c .header_right ul li .list li:hover{
+    background-color:#c53f4c;
+    color:#fff;
+}
+header .inner_c .header_right ul li span{
+    position:absolute;
+    left:35px;
+    top:-5px;
+    background-color: #fff;
+    width:15px;
+    height:15px;
+    transform:rotate(45deg);
+    z-index:1;
+}
+/*img*/
+.img{
+    height:60px;
+    width:100%;
+    background:url(http://www.dangao.com/imgbanner/top_ad1200.jpg) no-repeat center top;
+}
+/*section*/
+section{
+    width:1200px;
+    margin:0 auto;
+    height:70px;
+    padding-top:30px;
+}
+section .sec_left{
+    width:240px;
+    height:70px;
+    float:left;
+}
+section .sec_left img{
+    width:200px;
+}
+section .sec_center{
+    width:780px;
+    height:70px;
+    float:left;
+}
+section .sec_center form{
+    width:780px;
+    height:70px;
+}
+section .sec_center form input{
+    margin-left:150px;
+    width:459px;
+    height:34px;
+    border:2px solid #C81623;
+    border-top:1px solid #C81623;
+}
+section .sec_center form .ss{
+    width:76px;
+    height:38px;
+    background-color: #c81623;
+    color:#fff;
+    text-align:center;
+    line-height:38px;
+    display:inline-block;
+    margin-top:2px;
+}
+section .sec_center form p.wz{
+    margin-left:150px;
+    font-size:12px;
+    margin-top:5px;
+}
+section .sec_center form p.wz span{
+    margin-left:5px;
+}
+section .sec_center form p.wz span a{
+    color:#666;
+}
+section .sec_center form p.wz span.cur a{
+    color:#c00;
+}
+section .sec_center form p.wz span.wan a{
+    color:#c00;
+}
+section .sec_right{
+    width:180px;
+    height:70px;
+    float:left;
+    position: relative;
+}
+section .sec_right .gwc{
+    width:142px;
+    height:38px;
+    border:1px solid #ccc;
+    margin-left:38px;
+    text-align:center;
+    line-height:38px;
+    position:relative;
+    z-index:-999;
+}
+section .sec_right .gwc a{
+    font-size:12px;
+    color:#666;
+}
+section .sec_right .gwc i{
+    display:inline-block;
+    background: url(/images/cartico.png);
+    width:18px;
+    height:16px;
+    margin-left:-15px;
+    margin-right:5px;
+    margin-right:5px;
+}
+section .sec_right .tishi{
+    color:#999;
+    font-size:14px;
+    line-height:70px;
+    width:310px;
+    height:70px;
+    position:absolute;
+    right:0;
+    text-align:right;
+    background-color: #fff;
+    box-shadow:0 0 5px rgba(0,0,0,0.2);
+    border:1px solid #ddd;
+    display:none;
+    z-index:999;
+}
+/*nav*/
+nav{
+    height:45px;
+    width:100%;
+    border-bottom:1px solid #c00;
+}
+nav .inner_c{
+    height:45px;
+    width:1200px;
+    margin:0 auto;
+}
+nav .inner_c .nav_left{
+    width:210px;
+    height:45px;
+    background-color: #C81623;
+    color:#fff;
+    line-height:45px;
+    float:left;
+}
+nav .inner_c .nav_left .fenlei{
+    margin-left:10px;
+}
+nav .inner_c .nav_left .productList{
+    position:relative;
+    z-index:999;
+    background-color: #E4393C;
+    height:400px;
+}
+nav .inner_c .nav_left .productList li{
+    height:36px;
+}
+nav .inner_c .nav_left .productList li a{
+    color:#fff;
+    font-size:13px;
+    margin-left:10px;
+    display:inline-block;
+    line-height:36px;
+}
+nav .inner_c .nav_left .productList li span{
+    position: absolute;
+    right:8px;
+}
+nav .inner_c .nav_left .productList li:hover{
+    background-color: #f7f7f7;
+}
+nav .inner_c .nav_left .productList li:hover a{
+    color:#c00;
+}
+nav .inner_c .nav_right{
+    width:990px;
+    height:45px;
+    float:left;
+}
+nav .inner_c .nav_right li{
+    float:left;
+    margin:0 15px;
+}
+nav .inner_c .nav_right li a{
+    line-height:45px;
+    color:#333;
+    width:100%;
+    display:inline-block;
+}
+nav .inner_c .nav_right li a:hover{
+    color:#c00;
+}
+nav .inner_c .nav_right li:last-child{
+    color:#c81623;
+    font-size:24px;
+    padding-left:36px;
+    position: relative;
+}
+nav .inner_c .nav_right li:last-child::before{
+    content:'';
+    position: absolute;
+    left:0;
+    width:39px;
+    height:35px;
+    background: url(../images/index_tel_ico.jpg)no-repeat;
+}
+nav .inner_c .nav_right .yongtu{
+    background-color: #f7f7f7;
+    position: relative;
+    z-index:999;
+    height:400px;
+    margin-top:47px;
+    display:none;
+}
+nav .inner_c .nav_right .yongtu table{
+    width:700px;
+    position:absolute;
+    top:30px;
+    left:20px;
+}
+nav .inner_c .nav_right .yongtu .rightImg{
+    width:100px;
+    position:absolute;
+    right:110px;
+    top:20px;
+}
+/*轮播*/
+section.lunbo{
+    width:100%;
+    height:400px;
+    margin-top:-30px;
+    position: relative;
+}
+section.lunbo .carousel{
+    width:100%;
+    height:400px;
+    margin:0 auto;
+    position: relative;
+}
+section.lunbo .carousel ul li {
+    position: absolute;
+    top: 0;
+    left:50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    opacity:0;
+    filter:alpha(opacity=0);
+}
+section.lunbo .carousel ul li.first{
+    opacity:1;
+    filter:alpha(opacity=1);
+}
+/*小圆点*/
+section.lunbo .circles{
+    width:125px;
+    height:15px;
+    position:absolute;;
+    bottom:15px;
+    left:50%;
+}
+section.lunbo .circles ol li{
+    float:left;
+}
+section.lunbo .circles ol li a{
+    width:15px;
+    height:15px;
+    display:inline-block;
+    background-color: #fff;
+    border-radius:50%;
+    margin:5px;
+}
+section.lunbo .circles ol li.cur a{
+    background-color: #fb7d2e;
+}
+/*小轮播*/
+section.smallLB{
+    width:1200px;
+    height:430px;
+    margin:0 auto;
+    margin-top:-20px;
+}
+section.smallLB .sec_left{
+    width:630px;
+    height:430px;
+    float:left;
+}
+section.smallLB .sec_left .stage{
+    width:630px;
+    height:430px;
+    overflow:hidden;
+    position: relative;
+}
+section.smallLB .sec_left .stage ul{
+    width:600%;
+    position: absolute;
+    left:0;
+    top:100px;
+}
+section.smallLB .sec_left .stage ul li{
+    float:left;
+    width:630px;
+}
+section.smallLB .sec_left .stage ul li img{
+    width:630px;
+    height:360px;
+}
+section.smallLB .sec_left .stage .bar{
+    height:70px;
+    width:630px;
+}
+section.smallLB .sec_left .stage .bar b{
+    border-top:1px solid #ee4f38;
+    width:125px;
+    height:70px;
+    float:left;
+    text-align:center;
+    font-size:13px;
+    line-height:20px;
+    padding-top:20px;
+    color:#ee4f38;
+    margin-left:1px;
+}
+section.smallLB .sec_left .stage .bar b:nth-child(2){
+    border-top-color:#8c75db;
+    color:#8c75db;
+}
+section.smallLB .sec_left .stage .bar b:nth-child(3){
+    border-top-color:#ffab4a;
+    color:#ffab4a;
+}
+section.smallLB .sec_left .stage .bar b:nth-child(4){
+    border-top-color:#3a95eb;
+    color:#3a95eb;
+}
+section.smallLB .sec_left .stage .bar b:nth-child(5){
+    border-top-color:#ffab4a;
+    color:#ffab4a;
+}
+section.smallLB .sec_center{
+    float:left;
+    height:430px;
+    width:300px;
+}
+section.smallLB .sec_center img{
+    margin:0 10px;
+}
+section.smallLB .sec_center img:last-child{
+    margin-top:6px;
+}
+section.smallLB .sec_right{
+    width:250px;
+    height:430px;
+    float:left;
+    margin-left:20px;
+    border:1px solid #ccc;
+    box-sizing:border-box;
+}
+section.smallLB .sec_right p:nth-child(1){
+    width:248px;
+    height:35px;
+    background-color: #ff6666;
+    color:#fff;
+    line-height:35px;
+    text-align:center;
+    font-size:17px;
+}
+section.smallLB .sec_right p:nth-child(2){
+    margin-top:10px;
+}
+section.smallLB .sec_right p.lianxi{
+    width:248px;
+    heigth:40px;
+    color:#c81623;
+    font-size:24px;
+    line-height:45px;
+    padding-left:60px;
+    position: relative;
+}
+section.smallLB .sec_right .lianxi::before{
+    content:'';
+    position:absolute;
+    left:10px;
+    width:39px;
+    height:35px;
+    background: url(../images/index_tel_ico.jpg) no-repeat;
+}
+section.smallLB .sec_right p.lianxi:nth-child(3)::before{
+    background-position:0px -48px;
+}
+section.smallLB .sec_right p.lianxi:nth-child(4)::before{
+    background-position:0px -100px;
+}
+section.smallLB .sec_right p.lianxi a{
+    color:#c81623;
+}
+section.smallLB .sec_right p:nth-child(4){
+    font-size:20px;
+}
+section.smallLB .sec_right img{
+    margin-top:15px;
+    margin-left:30px;
+}
+section.smallLB .sec_right p:last-child{
+    text-align:center;
+}
