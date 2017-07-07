@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+            color: gray;
+        }
+        header{
+            width: 100%;
+            height: 100px;
+            /*min-width: 1300px;*/
+            border-bottom:4px solid #f2f2f2;
+        }
+        .head{
+            width: 1200px;
+            margin: 0 auto;
+        }
+        .head a.zuo{
+            margin-left: 50px;
+            width:70px;
+            height: 100px;
+        }
+        .head a.zuo img{
+            margin-top: 20px;
+            width: 200px;
+            height: 55px;
+        }
+        header a.zuo,header .you,.you1{
+            float: left;
+        }
+        header .you{
+            line-height: 150px;
+            width: 140px;
+            margin-left: 900px;
+        }
+        section{
+            width: 900px;
+            margin: 0 auto;
+            height:600px;
+            padding: 40px;
+        }
+        section .biao{
+            width:1002px;
+            height: 504px;
+            background-color: white;
+        }
+        section .biao .zuo{
+            float: left;
+            width: 540px;
+            height: 404px;
+            border-right: 1px solid #e0e0e0;
+            padding: 20px 30px;
+        }
+
+        section .biao .zuo form div.inp{
+            width:400px;
+            height: 45px;
+            border: 1px solid #e5e5e5;
+            position: relative;
+            padding-left: 6px;
+            line-height: 45px;
+        }
+        section .biao .zuo form div.inp input{
+            width: 200px;
+            height: 26px;
+            border:none;
+            outline:none;
+            margin-left: 10px;
+            margin-top: 8px;
+        }
+        section .biao .zuo form>span{
+            text-align: center;
+            line-height: 38px;
+            margin-top: 20px;
+            display: block;
+            width: 280px;
+            height: 38px;
+            background-color: #f25454;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        section .biao .you{
+            text-align: center;
+            float: left;
+            width: 300px;
+            padding: 16px;
+        }
+        section .biao .you div{
+            padding: 6px;
+            font-size: 12px;
+        }
+        section .biao .you img{
+            width: 180px;
+            height: 180px;
+        }
+        </style>
+</head>
+<body  ng-app="myApp" ng-controller="studentCtry1">
+<header>
+    <div class="head">
+        <a class="zuo" href="http://www.dangao06.cn/">
+            <img src="http://www.dangao06.cn/themes/newpage/images/logo.png" alt="">
+        </a>
+        <div class="you">
+            <a href="denglu.html">已有账号，请登录</a>
+        </div>
+    </div>
+</header>
+<section>
+    <div class="biao">
+        <div class="zuo">
+            <form>
+              <!--  <div class="inp cur">
+                    图片验证码<input type="text" class="username" ng-model="a.name" placeholder="请输入验证码">
+                </div>
+                <br>
+                <div class="inp cur">
+                    手　机　号<input type="text" class="username" ng-model="a.name" placeholder="请输入验证码">
+                </div>-->
+                <br>
+                <div class="inp cur">
+                    用 户 姓 名<input type="text" class="username" ng-model="a.name" placeholder="手机号/邮箱">
+                </div><br>
+                <div class="inp">
+                    登 录 密 码<input type="password" ng-model="a.age" placeholder="用户名">
+                </div><br>
+                <!--<div class="inp">
+                   <input type="text" placeholder="密码">
+                </div>-->
+                <div>我已阅读并同意<a style="color: #89c8ff;" href="zhuce.html"> 《七彩用户注册协议》</a></div>
+                <span type="button"  ng-click="zhuce(a)">注 册</span><br>
+
+            </form>
+        </div>
+        <div class="you">
+            <img src="img/android_ewm.png" alt="">
+            <div>关注七彩蛋糕微信<br>
+                实时跟踪订单状态</div>
+            <img src="img/android_ewm.png" alt="">
+            <div>关注七彩蛋糕微信<br>
+                实时跟踪订单状态</div>
+        </div>
+    </div>
+</section>
+<script src="angular.min.js"></script>
+<script>
+    var app = angular.module('myApp',[])
+    //2.创建控制器
+    app.controller('studentCtry1',function($scope,$http) {
+        //简写
+        $scope.zhuce= function (a) {
+            $http.post('/s',a).then(function (res) {
+                    if (result.success) {
+                        //新增成功
+                        //console.log('成功');
+                        alert('成功')
+                    }else{
+                        //console.log('失败');
+                    }
+                })
+        }
+    });
+</script>
+</body>
+</html>

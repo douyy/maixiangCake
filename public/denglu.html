@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+            color: gray;
+        }
+        header{
+            width: 100%;
+            height: 100px;
+            /*min-width: 1300px;*/
+        }
+        .head{
+            width: 1200px;
+            margin: 0 auto;
+        }
+        .head a.zuo{
+            margin-left: 50px;
+            width:70px;
+            height: 100px;
+        }
+        .head a.zuo img{
+            margin-top: 20px;
+            width: 200px;
+            height: 55px;
+        }
+        header a.zuo,header .you,.you1{
+            float: left;
+        }
+        header .you{
+            line-height: 100px;
+            width: 600px;
+            margin-left: 460px;
+        }
+        .you1{
+            margin-left: 40px;
+            position: relative;
+        }
+        .you1:before{
+            content: "";
+            width: 20px;
+            height: 20px;
+            background-color: red;
+            background: url("img/f-ico1.png");
+            -webkit-background-size:20px 20px;
+            background-size:20px 20px;
+            position: absolute;
+            top: 40%;
+            left: -24px;
+        }
+        .you1:nth-child(2):before{
+            background: url("img/f-ico2.png");
+            -webkit-background-size:20px 20px;
+            background-size:20px 20px;
+        }
+        .you1:nth-child(3){
+            margin-left: 60px;
+        }
+        .you1:nth-child(3):before{
+            background: url("img/f-ico3.png");
+            -webkit-background-size:20px 20px;
+            background-size:20px 20px;
+        }
+        section{
+            width: 100%;
+            height: 475px;
+            background-color: #e23827;
+            position: relative;
+        }
+        section .img{
+            width: 1300px;
+            height: 475px;
+            background: url("img/userlogin_bg.jpg") -240px -60px;
+        }
+        section .biao{
+            position: absolute;
+            top: 60px;
+            left: 800px;
+            width:502px;
+            height: 354px;
+            background-color: white;
+        }
+        section .biao .zuo{
+            float: left;
+            width: 290px;
+            height: 314px;
+            border-right: 1px solid #e0e0e0;
+            padding: 20px 30px;
+        }
+        section .biao .zuo form .top{
+            width:280px;
+            height:35px;
+            background-color: #e5e5e5;
+        }
+        section .biao .zuo form .top span{
+            float: left;
+            display: block;
+            width:140px;
+            height: 35px;
+            font-size: 12px;
+            /*background-color: #e5e5e5;*/
+            text-align: center;
+            line-height: 35px;
+        }
+        section .biao .zuo form div.inp{
+            width:280px;
+            height: 38px;
+            border: 1px solid #e5e5e5;
+            position: relative;
+        }
+        section .biao .zuo form div.inp input{
+            width: 200px;
+            height: 26px;
+            border:none;
+            outline:none;
+            margin-left: 40px;
+            margin-top: 6px;
+            border-left:1px solid #e5e5e5;
+        }
+        section .biao .zuo form div.inp:before{
+            position: absolute;
+            top: 0px;
+            left: 2px;
+            width: 37px;
+            height: 37px;
+            content: "";
+            background:url("img/pwd-icons-new.png")-48px 1px;
+        }
+        section .biao .zuo form div.cur:before{
+            background:url("img/pwd-icons-new.png")-0px 1px;
+        }
+        section .biao .zuo form>span{
+            text-align: center;
+            line-height: 38px;
+            margin-top: 20px;
+            display: block;
+            width: 280px;
+            height: 38px;
+            background-color: #f25454;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        section .biao .you{
+            text-align: center;
+            float: left;
+            width: 110px;
+            padding: 16px;
+        }
+        section .biao .you div{
+            padding: 6px;
+            font-size: 12px;
+        }
+        section .biao .you img{
+            width: 120px;
+            height: 120px;
+        }
+        .footers{
+            width: 100%;
+            height: 172px;
+            min-width: 1200px;
+        }
+        .footers .ul{
+            display: block;
+            width: 1200px;
+            margin: 0 auto;
+            padding: 20px 0px;
+        }
+        .footers .ul ul{
+            float: left;
+            padding: 20px 0px;
+            display: block;
+            width: 161px;
+            height: 100px;
+        }
+        .footers .ul li{
+            height: 30px;
+        }
+        .footers .ul li h4{
+            line-height: 10px;
+            height: 60px;
+            color: gray;
+        }
+        .footers .ul li a{
+            font-size: 12px;
+        }
+        .footers .ul .you{
+            float: left;
+            width: 232px;
+            height: 92px;
+            border-left: 1px solid #e0e0e0;
+            margin-top: 20px;
+        }
+        .focus{background-color:red;color: white;}
+    </style>
+</head>
+<body>
+<header>
+    <div class="head">
+        <a class="zuo" href="http://www.dangao06.cn/">
+            <img src="http://www.dangao06.cn/themes/newpage/images/logo.png" alt="">
+        </a>
+        <div class="you">
+            <div class="you1">全国3000+地区免费送</div>
+            <div class="you1">1-3小时急速送达</div>
+            <div class="you1">当天制作，新鲜上门</div>
+        </div>
+    </div>
+
+</header>
+<section ng-app="myApp" ng-controller="studentCtry1">
+    <div class="img">
+    </div>
+    <div class="biao">
+        <div class="zuo">
+            <form ng-app="myApp" ng-controller="studentCtry1">
+                <div class="top">
+                   <span ng-click="state=1;" ng-class="{focus:state==1}">手机号+密码登录</span>
+                   <span ng-click="state=2;" ng-class="{focus:state==2}">手机号+验证码登录</span>
+                </div>
+                <br>
+                <div class="inp cur">
+                    <input type="text" class="username" ng-model="a.name" placeholder="手机号/邮箱">
+                </div><br>
+                <div class="inp">
+                    <input type="password" ng-model="a.password" placeholder="密码">
+                </div><br>
+                <div class="inp">
+                    <input type="text" placeholder="请输入图片验证码">
+                </div>
+                <span type="button"  ng-click="denglu(a)">登 录</span><br>
+                <div>没有注册？<a style="color: red;" href="zhuce.html">立即免费注册>>></a></div>
+            </form>
+        </div>
+        <div class="you">
+            <img src="img/android_ewm.png" alt="">
+            <div>关注七彩蛋糕微信
+                实时跟踪订单状态</div>
+            <img src="img/android_ewm.png" alt="">
+            <div>关注七彩蛋糕微信
+                实时跟踪订单状态</div>
+        </div>
+    </div>
+</section>
+<script src="angular.min.js"></script>
+<script>
+    var app = angular.module('myApp',[])
+    //2.创建控制器
+    //app.controller(name,constructor)
+    app.controller('studentCtry1',function($scope,$http) {
+        //简写
+        $scope.a = {};
+        $scope.denglu = function (a) {
+            xuanxin(a)
+
+        };
+
+        function xuanxin(a) {
+            $http.get('/s',a).then(
+                function (res) {
+                    var dataa=res.data.date;
+                    var fase;
+                    for(var i=1;i<dataa.length;i++){
+                        if((dataa[i].name == a.name)&&(dataa[i].age == a.password)){
+                                alert('成功');
+                                self.location.href="https://www.baidu.com";
+                        }else{
+
+                        }
+                    }
+                    $scope.students = res.data.date;
+                    $scope.isShow = false;
+                }, function (err) {
+
+                }
+            )
+        }
+    });
+</script>
+<footer class="footers">
+    <div class="ul">
+        <ul>
+            <li><h4>购物指南</h4></li>
+            <li><a href="">购物流程</a></li>
+            <li><a href="">会员介绍</a></li>
+            <li><a href="">联系客服</a></li>
+        </ul>
+        <ul>
+            <li><h4>配送方式</h4></li>
+            <li><a href="">送货上门</a></li>
+            <li><a href="">门店自取</a></li>
+            <li><a href="">配送范围</a></li>
+        </ul>
+        <ul>
+            <li><h4>支付方式</h4></li>
+            <li><a href="">在线支付</a></li>
+            <li><a href="">银行汇款</a></li>
+            <li><a href="">货到付款</a></li>
+        </ul>
+        <ul>
+            <li><h4>服务支持</h4></li>
+            <li><a href="">售后服务</a></li>
+            <li><a href="">退款说明</a></li>
+            <li><a href="">取消订单</a></li>
+        </ul>
+        <ul>
+            <li><h4>相关知识</h4></li>
+            <li><a href="">生日蛋糕的意义</a></li>
+            <li><a href="">蛋糕尺寸说明</a></li>
+            <li><a href="">正确切蛋糕的方法</a></li>
+        </ul>
+        <ul>
+            <li><h4>联系我们</h4></li>
+            <li><a href="">联系我们</a></li>
+        </ul>
+        <div class="you">
+            <img src="" alt=""><br>
+            <div>周一至周日 24小时服务</div> <br>
+            <img src="" alt="">
+        </div>
+    </div>
+
+
+</footer>
+</body>
+</html>
