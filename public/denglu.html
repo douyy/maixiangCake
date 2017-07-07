@@ -259,29 +259,21 @@
     //app.controller(name,constructor)
     app.controller('studentCtry1',function($scope,$http) {
         //简写
-        $scope.a = {};
         $scope.denglu = function (a) {
             xuanxin(a)
 
         };
-
         function xuanxin(a) {
             $http.get('/s',a).then(
                 function (res) {
                     var dataa=res.data.date;
-                    var fase;
-                    for(var i=1;i<dataa.length;i++){
-                        if((dataa[i].name == a.name)&&(dataa[i].age == a.password)){
-                                alert('成功');
-                                self.location.href="https://www.baidu.com";
-                        }else{
-
+                    console.log(a.name);
+                    for(var i=1;i< dataa.length ;i++){
+                        if((dataa[i].name == a.name)&&(dataa[i].password == a.password)){
+                            console.log(1);
+                                self.location.href="index.html";
                         }
                     }
-                    $scope.students = res.data.date;
-                    $scope.isShow = false;
-                }, function (err) {
-
                 }
             )
         }
