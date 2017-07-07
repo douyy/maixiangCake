@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+        header{
+            width: 100%;
+            height: 175px;
+        }
+        section{
+            width: 100%;
+            height: 600px;
+            padding: 10px 0px;
+        }
+        .section{
+            width: 1200px;
+            height: 600px;
+            margin: 0 auto;
+        }
+        section .section .top{
+            width: 1200px;
+            height: 37px;
+            border: 1px solid #e5e5e5;
+            line-height: 37px
+        }
+        section .section .center{
+            width:1200px;
+            height: 772px;
+        }
+        section .section .left{
+            width: 210px;
+            height: 772px;
+            float: left;
+        }
+        section .section .left h4{
+            margin-top: 10px;
+            display: block;
+            padding-left: 8px;
+            line-height: 35px;
+            width: 202px;
+            height: 35px;
+            background-color: #c81623;
+            color: white;
+        }
+        section .section .left ul{
+            list-style: none;
+            border: 1px solid #e5e5e5;
+        }
+        section .section .left ul li{
+            padding-left: 14px;
+            line-height: 31px;
+            width: 195px;
+            height: 29px;
+            border-bottom: 1px solid #e5e5e5;
+        }
+        section .section .right{
+            width: 980px;
+            height: 772px;
+            float: left;
+        }
+        section .section .right .top{
+            width: 980px;
+            margin-top: 10px;
+            margin-left: 10px;
+        }
+        section .section .right .top2{
+            height: 500px;
+            width: 920px;
+            padding: 0px 30px;
+        }
+        section .section .right .top2 h4{
+            margin-top: 10px;
+            margin-bottom: 10px;
+            color: #b2191b;
+        }
+        section .section .right .top2>div{
+            width: 980px;
+            height: 50px;
+        }
+        section .section .right .top2>div>button{
+            width: 120px;
+            height: 40px;
+            background-color: #e33a3d;
+            color: white;
+            border:none;
+            margin-left: 60px;
+            margin-top: 20px;
+        }
+        section .section .right .top2 .input{
+           text-align: right;
+            display: block;
+            width: 300px;
+            height: 40px;
+            line-height: 30px;
+        }
+        section .section .right .top2 input{
+            width: 160px;
+            height: 22px;
+        }
+        section .section .right .top2 .input,input{
+            float: left;
+        }
+        section .section .bottom{
+            width: 1200px;
+            height: 75px;
+            line-height: 75px;
+        }
+        section .xia1{
+            width: 200px;
+            float: left;
+            margin-left: 40px;
+            position: relative;
+        }
+        section .xia1:before{
+            content: "";
+            width: 20px;
+            height: 20px;
+            background-color: red;
+            background: url("img/f-ico1.png");
+            -webkit-background-size:20px 20px;
+            background-size:20px 20px;
+            position: absolute;
+            top: 26px;
+            left: -24px;
+        }
+        section .xia1:nth-child(2):before{
+            background: url("img/f-ico2.png");
+            -webkit-background-size:20px 20px;
+            background-size:20px 20px;
+        }
+        section .xia1:nth-child(3):before{
+            background: url("img/f-ico3.png");
+            -webkit-background-size:20px 20px;
+            background-size:20px 20px;
+        }
+        section .xia1:nth-child(4):before{
+            background: url("img/f-ico4.png");
+            -webkit-background-size:20px 20px;
+            background-size:20px 20px;
+        }
+        section .xia1:nth-child(5):before{
+            background: url("img/f-ico5.png");
+            -webkit-background-size:20px 20px;
+            background-size:20px 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+
+    </header>
+    <section>
+        <div class="section">
+            <div class="top">首页＞帮助中心＞订单查询</div>
+            <div class="center">
+                <div class="left">
+                    <h4>购物指南</h4>
+                    <ul>
+                        <li><a href="">购物流程</a></li>
+                        <li><a href="">会员介绍</a></li>
+                        <li><a href="">联系客服</a></li>
+                    </ul>
+                    <h4> 配送方式</h4>
+                    <ul>
+                        <li><a href="">送货上门</a></li>
+                        <li><a href="">门店自取</a></li>
+                        <li><a href="">配送范围</a></li>
+                    </ul>
+                    <h4> 支付方式</h4>
+                    <ul>
+                        <li><a href="">在线支付</a></li>
+                        <li><a href="">银行汇款</a></li>
+                        <li><a href="">货到付款</a></li>
+                    </ul>
+                    <h4>服务支持</h4>
+                    <ul>
+                        <li><a href="">售后服务</a></li>
+                        <li><a href="">退款说明</a></li>
+                        <li><a href="">取消订单</a></li>
+                    </ul>
+                    <h4>关注我们</h4>
+                    <ul>
+                        <li><a href="">微信公众号</a></li>
+                        <li><a href="">七彩蛋糕APP</a></li>
+                        <li><a href="">情人节特别提示</a></li>
+                    </ul>
+                    <h4>联系我们</h4>
+                    <ul>
+                        <li><a href="">联系我们</a></li>
+                    </ul>
+                </div>
+                <div class="right">
+                    <div class="top" style="font-size: 18px;">订 单 查 询</div>
+                    <div class="top top2">
+                        <h4>一、请输入订单号、订货人手机查询！</h4>
+                        <div>
+                            <span class="input">请填写订单号：</span> <input type="text">
+                            <button>查询</button>
+                        </div>
+                        <div>
+                            <span class="input">请输入订货人手机：</span> <input type="text">
+                        </div>
+
+                        <p>说明：本查询为快捷查询系统，不论是否注册用户均可以查询，
+                            必须与提交订单时填写方式一致， 有任何疑问请随时与我们联络，
+                            24小时服务热线：400-658-1177，谢谢！</p><br>
+                        <h4>二、如果您忘记订单号码，请用以下查询！</h4>
+                        <div>
+                            <span class="input">输入订货人电话：</span> <input type="text">
+                            <button>查询</button>
+                        </div>
+                        <div>
+                            <span class="input">输入收货人电话：</span> <input type="text">
+                        </div>
+
+                        <p>说明：本查询为快捷查询系统，不论是否注册用户均可以查询，双方电话都要输入，
+                            必须与提交订单时填写方式一致，
+                            有任何疑问请随时与我们联络，24小时服务热线：400-658-1177，谢谢！</p>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <div class="bottom">
+                <div class="xia1">全国3000+地区免费送</div>
+                <div class="xia1">1-3小时急速送达</div>
+                <div class="xia1">当天制作，新鲜上门</div>
+                <div class="xia1">全年无休，个性定制</div>
+                <div class="xia1">支付宝，微信线上无忧支付</div>
+            </div>
+        </div>
+
+    </section>
+</body>
+</html>
