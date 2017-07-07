@@ -104,6 +104,7 @@
             width: 180px;
             height: 180px;
         }
+
         </style>
 </head>
 <body  ng-app="myApp" ng-controller="studentCtry1">
@@ -133,7 +134,7 @@
                     用 户 姓 名<input type="text" class="username" ng-model="a.name" placeholder="手机号/邮箱">
                 </div><br>
                 <div class="inp">
-                    登 录 密 码<input type="password" ng-model="a.age" placeholder="用户名">
+                    登 录 密 码<input type="password" ng-model="a.password" placeholder="用户名">
                 </div><br>
                 <!--<div class="inp">
                    <input type="text" placeholder="密码">
@@ -161,6 +162,7 @@
         //简写
         $scope.zhuce= function (a) {
             $http.post('/s',a).then(function (res) {
+                    var result =res.data;
                     if (result.success) {
                         //新增成功
                         //console.log('成功');
