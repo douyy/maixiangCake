@@ -1,0 +1,84 @@
+<style>
+    .content{
+        width:1200px;
+        margin:0 auto;
+        margin-top:20px;
+    }
+    .top p{
+        color: #E4393C;
+        position: relative;
+        float: right;
+        margin-left:50px;
+        cursor: pointer;
+    }
+    .top p.qq{
+        margin-left:70px;
+    }
+    .top p::before{
+        content: '';
+        position: absolute;
+        top:50%;
+        left:-30px;
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+    .top p.qq::before{
+        background:url("images/z_qq.png") no-repeat;
+        width:24px;
+        height:29px;
+        -webkit-background-size:100%;
+        background-size:100%;
+    }
+    .top p.wx::before{
+        background:url("images/z_wx.png") no-repeat;
+        width:30px;
+        height:25px;
+        -webkit-background-size:100%;
+        background-size:100%;
+        left:-35px;
+    }
+    .top p.wx::after{
+        content: '';
+        background:url("images/pro_sanjiao.png") no-repeat;
+        width:13px;
+        height:7px;
+        position: absolute;
+        top:50%;
+        right:-20px;
+        margin-top:-3px;
+    }
+    .top p.dh::before{
+        background:url("images/z_zx.png") no-repeat;
+        width:24px;
+        height:24px;
+        -webkit-background-size:100%;
+        background-size:100%;
+    }
+    .top p.wx img{
+        position: absolute;
+        top:30px;
+        left:-40px;
+        width:120px;
+        border:1px solid #ddd;
+        display: none;
+    }
+    .top p.wx:hover img{
+        display: block;
+    }
+</style>
+
+
+<div class="content">
+    <div class="top">
+        <a href="">麦香蛋糕首页 > > ></a> <span>{{detail.name}}</span>
+        <p class="qq">QQ：139010678</p>
+        <p class="wx">
+            微信咨询
+            <img src="images/weixin.jpg" alt="">
+        </p>
+        <p class="dh">我在线，点我咨询</p>
+    </div>
+</div>
