@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="stylesheets/style.css">
 </head>
 <body ng-app="app">
+
     <div ng-view>
 
     </div>
@@ -48,16 +49,16 @@
 
     });
 
-    appModule.controller('detailCtrl',function($scope,$http,$routeParams){
-        //console.log($routeParams.id);
-        var id = $routeParams.id;
-        $http.get('/birthday/'+id).then(function(res){
-            if(res.data.success){
-                console.log(res.data.data);
-                $scope.detail = res.data.data[0];
-            }
-        });
-    })
+//    appModule.controller('detailCtrl',function($scope,$http,$routeParams){
+//        //console.log($routeParams.id);
+//        var id = $routeParams.id;
+//        $http.get('/birthday/'+id).then(function(res){
+//            if(res.data.success){
+//                console.log(res.data.data);
+//                $scope.detail = res.data.data[0];
+//            }
+//        });
+//    })
 </script>
 </body>
 </html>

@@ -4,6 +4,10 @@
         margin:0 auto;
         margin-top:20px;
     }
+    .top{
+        border-bottom:1px solid #ddd;
+        height:40px;
+    }
     .top p{
         color: #E4393C;
         position: relative;
@@ -57,7 +61,7 @@
         -webkit-background-size:100%;
         background-size:100%;
     }
-    .top p.wx img{
+    img.ewm{
         position: absolute;
         top:30px;
         left:-40px;
@@ -68,6 +72,205 @@
     .top p.wx:hover img{
         display: block;
     }
+    .middle{
+        margin-top:20px;
+    }
+    .box{
+        width:422px;
+        height:300px;
+        border:1px solid red;
+        float: left;
+    }
+    .middle .detail{
+        float: left;
+        margin-left:20px;
+        width:750px;
+        font-size:12px;
+    }
+    .middle .detail p{
+        width:50%;
+    }
+    .middle .detail p.name{
+        font-size:20px;
+    }
+    .middle .detail p.id{
+        font-size:17px;
+        float: right;
+        margin-top:-5px;
+    }
+    .middle .detail div.zhucai{
+        margin-top:30px;
+        color: #e01d20;
+        font-size:16px;
+    }
+    .middle .detail div.jiage{
+        margin-top:15px;
+        background:url("images/pro_bg.png") no-repeat;
+        -webkit-background-size:100%;
+        background-size:100%;
+        position: relative;
+        height:100px;
+    }
+    .middle .detail div.jiage p{
+        color: #630;
+        position: absolute;
+        top:50%;
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+    .middle .detail div.jiage p:first-child{
+        top:35%;
+        left: 20px;
+    }
+    .middle .detail div.jiage p:nth-child(2){
+        top:65%;
+        left:20px;
+    }
+    .middle .detail div.jiage p:nth-child(3){
+        left:40%;
+        cursor: pointer;
+    }
+    .middle .detail div.jiage p:nth-child(3):hover .ewm{
+        display: block;
+    }
+    .middle .detail div.jiage p:nth-child(3) .ewm{
+        left:-15px;
+    }
+    .middle .detail div.jiage p:nth-child(3) img{
+        vertical-align: middle;
+        margin-left:10px;
+    }
+    .middle .detail div.jiage p:nth-child(4){
+        right:-13%;
+    }
+    .middle .detail div.jiage del,.middle .detail div.jiage b{
+        margin-left:40px;
+    }
+    .middle .detail div.jiage b{
+        color: #c40000;
+        font-size:25px;
+    }
+    .middle .detail div.jiage p:nth-child(4) a:hover{
+        text-decoration: underline;
+    }
+    .middle .detail div.size{
+        margin-top:15px;
+        border-bottom:1px solid #ddd;
+    }
+    .middle .detail div.can{
+        border-bottom:none;
+    }
+    .middle .detail div.size ul{
+        margin-top:5px;
+        overflow: hidden;
+    }
+    .middle .detail div.size ul li{
+        border:1px solid #ccc;
+        float: left;
+        margin-right:10px;
+        margin-bottom: 10px;
+        padding:5px 15px;
+        position: relative;
+        z-index:-2;
+        cursor: pointer;
+    }
+    .middle .detail div.size ul li::before{
+        content: '';
+        position: absolute;
+        bottom:-2px;
+        right:-2px;
+        background: url("images/proicon.png") no-repeat;
+        width:12px;
+        height:12px;
+        display: none;
+    }
+    .middle .detail div.size ul li.check{
+        border:1px solid #c40000;
+    }
+    .middle .detail div.size ul li.check::before{
+        display: block;
+    }
+    .middle .detail div.size ul li:hover{
+        border:1px solid black;
+    }
+    .middle .detail div.xuan{
+        font-size:15px;
+    }
+    .middle .detail div.xuan span{
+        color: red;
+    }
+    .middle .detail div.shuo{
+        font-size:14px;
+        margin-top:25px;
+        color: #888;
+    }
+    .middle .detail .bottom{
+        margin-top:5px;
+    }
+    .middle .detail .bottom table{
+        float: left;
+    }
+    .middle .detail .bottom table,tr,td{
+        border-collapse:collapse;
+        border:1px solid #dddddd;
+    }
+    .middle .detail .bottom table td input{
+        border:0;
+        outline:0;
+        width:30px;
+        height:45px;
+        text-align: center;
+    }
+    .middle .detail .bottom table td.num{
+        background:url("images/proicon.png") no-repeat -15px -20px;
+        width:20px;
+        height:22px;
+        position: relative;
+        cursor: pointer;
+    }
+    .middle .detail .bottom table td.jia{
+        top:5px;
+    }
+    .middle .detail .bottom table td.jian{
+        background-position: -15px 0;
+        top:10px;
+    }
+    .middle .detail .bottom a{
+        display: block;
+        font-size:16px;
+        font-weight:600;
+        float: left;
+        text-align: center;
+    }
+    .middle .detail .bottom a.now{
+        width:138px;
+        height:43px;
+        line-height:43px;
+        margin:0 20px 0 40px;
+        color: #D41C44;
+        border:2px solid #D41C44;
+        background-color: #ffeced;
+
+    }
+    .middle .detail .bottom a.now:hover{
+        background-color: #fff;
+    }
+    .middle .detail .bottom a.join{
+        background:url("images/procarticon.png") no-repeat 29px 13px;
+        width: 188px;
+        height:45px;
+        background-color: #d22147;
+        color: #fff;
+        border:1px solid #d22147;
+        line-height:45px;
+        text-indent: 20px;
+    }
+    .middle .detail .bottom a.join:hover{
+        background-color: #f5345e;
+    }
 </style>
 
 
@@ -77,8 +280,69 @@
         <p class="qq">QQ：139010678</p>
         <p class="wx">
             微信咨询
-            <img src="images/weixin.jpg" alt="">
+            <img src="images/weixin.jpg" alt="" class="ewm">
         </p>
         <p class="dh">我在线，点我咨询</p>
     </div>
+    <div class="middle">
+        <div class="box"></div>
+        <div class="detail">
+            <p class="name">{{detail.name}}</p>
+            <p class="id">产品编号：{{detail.id}}</p>
+            <div class="zhucai">主材：{{detail.zhucai}}</div>
+            <div class="jiage">
+                <p>市场价<del>¥{{detail.yprice}}</del></p>
+                <p>麦香价<b>¥{{detail.price}}</b></p>
+                <p>
+                    去手机购买
+                    <img src="images/pro_app_ico.png" alt="">
+                    <img src="images/weixin.jpg" alt="" class="ewm">
+                </p>
+                <p>
+                    商品评分：
+                    <img src="images/xing.png" alt="">
+                    （<a href="">共16870条评论</a>）
+                </p>
+            </div>
+            <div class="size">
+                <p>选择尺寸:</p>
+                <ul>
+                    <li class="check" title="八英寸(20CM,2-3人食用)">八英寸(20CM,2-3人食用)</li>
+                    <li title="十英寸(25CM,4-6人食用)">十英寸(25CM,4-6人食用)</li>
+                    <li title="十二英寸(30CM,6-9人食用)">十二英寸(30CM,6-9人食用)</li>
+                    <li title="十四英寸(35CM,9-12人食用)">十四英寸(35CM,9-12人食用)</li>
+                    <li title="十六英寸(40CM,12-15人食用)">十六英寸(40CM,12-15人食用)</li>
+                    <li title="十八英寸(45CM,15-18人食用)">十八英寸(45CM,15-18人食用)</li>
+                    <li title="二十英寸(50CM,中型聚餐)">二十英寸(50CM,中型聚餐)</li>
+                </ul>
+            </div>
+            <div class="size can">
+                <p>选择餐具:</p>
+                <ul>
+                    <li class="check" title="5人份餐具">5人份餐具</li>
+                    <li title="10人份餐具">10人份餐具</li>
+                    <li title="15人份餐具">15人份餐具</li>
+                    <li title="20人份餐具">20人份餐具</li>
+                    <li title="25人份餐具">25人份餐具</li>
+                    <li title="30人份餐具">30人份餐具</li>
+                </ul>
+            </div>
+            <div class="xuan">您已选择：<span>十二英寸(适合6-9人食用)5人份餐具</span></div>
+            <div class="shuo">说明：受季节和地域影响，蛋糕装饰原料略有差异，产品及包装请以实物为准</div>
+            <div class="bottom">
+                <table>
+                    <tr>
+                        <td rowspan="2"><input type="text" value="1"></td>
+                        <td class="jia num" title="加"></td>
+                    </tr>
+                    <tr>
+                        <td class="jian num" title="减"></td>
+                    </tr>
+                </table>
+                <a href="javascript:;" class="now">立即购买</a>
+                <a href="javascripts:;" class="join">加入购物车</a>
+            </div>
+        </div>
+    </div>
+
 </div>
