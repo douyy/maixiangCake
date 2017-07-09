@@ -10,7 +10,7 @@ router.get('/',function(req,res){
     });
 });
 router.get('/a', function(req, res, next) {
-    conn.query('select * from cake where id <= 5',function(err,user){
+    conn.query('select * from cake where id <= 7',function(err,user){
         if (err) {
             return res.send({
                 success:false,

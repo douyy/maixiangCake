@@ -563,6 +563,7 @@ section.rmtj .title p:nth-child(2) a:hover{
 }
 section.rmtj .shangpin{
     width:1200px;
+    overflow:hidden;
 }
 section.rmtj .shangpin ul li{
     float: left;
@@ -573,10 +574,75 @@ section.rmtj .shangpin ul li{
     border-left:none;
     box-sizing:border-box;
 }
+section.rmtj .shangpin ul li img{
+    width:290px;
+}
+section.rmtj .shangpin ul li h2{
+    width:290px;
+    text-align:center;
+    margin-top:-30px;
+    color:#333;
+    font-size:14px;
+}
+section.rmtj .shangpin ul li p{
+    width:290px;
+    text-align:center;
+    color:#f00;
+    text-overflow: ellipsis;
+    white-space:nowrap;
+    margin-top:10px;
+    overflow:hidden;
+}
+section.rmtj .shangpin ul li p:nth-child(3){
+    margin-top:15px;
+}
+section.rmtj .shangpin ul li p:nth-child(3) span{
+    font-size:25px;
+}
+section.rmtj .shangpin ul li p:nth-child(3) span:nth-child(2){
+    display:none;
+}
+section.rmtj .shangpin ul li:hover{
+    border:3px solid #f4d0d0;
+}
 section.rmtj .shangpin ul li:nth-child(1){
     width:600px;
     border-left:1px solid #ededed;
     height:360px;
+}
+section.rmtj .shangpin ul li:nth-child(1) img{
+    float: left;
+    margin-top:40px;
+}
+section.rmtj .shangpin ul li:nth-child(1) .text{
+    margin-top:140px;
+    float:left;
+}
+section.rmtj .shangpin ul li:nth-child(1) .text h2{
+    font-size:25px;
+}
+section.rmtj .shangpin ul li:nth-child(1) .text p{
+    margin-top:20px;
+    color:#666;
+    font-size:15px;
+}
+section.rmtj .shangpin ul li:nth-child(1) .text p:nth-child(3){
+    margin-top:30px;
+    font-size:25px;
+    color:#f00;
+}
+section.rmtj .shangpin ul li:nth-child(1) .text p:nth-child(3) span:nth-child(2){
+    margin-left:20px;
+    width:80px;
+    height:30px;
+    background-color: #D91B25;
+    color:#fff;
+    font-size:14px;
+    line-height:30px;
+    text-align:center;
+    display:inline-block;
+    border-radius:5px;
+    cursor:pointer;
 }
 section.rmtj .shangpin ul li:nth-child(4){
     border-left:1px solid #ededed;
@@ -585,12 +651,8 @@ section.rmtj .shangpin ul li:nth-child(7) img{
     margin-left:5px;
     margin-top:5px;
 }
-section.rmtj .shangpin ul li img{
-    width:290px;
-}
-section.rmtj .shangpin ul li:hover{
-    border:3px solid #f4d0d0;
-}
+/*生日蛋糕*/
+
 /*攻略、评价、礼仪*/
 section.another{
     width:1200px;
