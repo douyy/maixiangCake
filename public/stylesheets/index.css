@@ -16,6 +16,7 @@ header{
     background-color: #f1f1f1;
     position:fixed;
     top:0;
+    z-index:999;
 }
 header .inner_c{
     width:1200px;
@@ -242,7 +243,7 @@ nav .inner_c .nav_left .fenlei{
 }
 nav .inner_c .nav_left .productList{
     position:relative;
-    z-index:999;
+    z-index:990;
     background-color: #E4393C;
     height:400px;
 }
@@ -437,10 +438,10 @@ section.smallLB .sec_center{
     height:430px;
     width:300px;
 }
-section.smallLB .sec_center img{
+section.smallLB .sec_center a img{
     margin:0 10px;
 }
-section.smallLB .sec_center img:last-child{
+section.smallLB .sec_center a:last-child img{
     margin-top:6px;
 }
 section.smallLB .sec_right{
@@ -591,6 +592,115 @@ section.rmtj .shangpin ul li img{
 section.rmtj .shangpin ul li:hover{
     border:3px solid #f4d0d0;
 }
+/*攻略、评价、礼仪*/
+section.another{
+    width:1200px;
+    margin:0 auto;
+    overflow:hidden;
+    padding-top:20px;
+}
+section.another .gonglue{
+    width:300px;
+    height:290px;
+    float:left;
+}
+section.another .huayu{
+    height:32px;
+    background-color: #737373;
+}
+section.another .huayu h4{
+    line-height:32px;
+    height:32px;
+    margin-left:15px;
+    float:left;
+    color:#fff;
+}
+section.another .huayu p{
+    float: right;
+    width:16px;
+    height:16px;
+    border-radius:50%;
+    background-color: #fff;
+    color:#737373;
+    line-height:16px;
+    text-align:center;
+    margin-top:10px;
+    margin-right:10px;
+    font-weight:bold;
+    font-size:18px;
+}
+section.another  ul{
+    background-color: #f2f2f2;
+    padding:20px 0;
+}
+section.another  ul li{
+    height:31px;
+    margin-left:40px;
+    list-style: circle;
+}
+section.another  ul li a{
+    font-size:12px;
+    color:#666;
+}
+section.another ul li a:hover{
+    color:#c00;
+    text-decoration: underline;
+}
+section.another .pingjia{
+    width:570px;
+    height:290px;
+    float:left;
+    margin-left:15px;
+}
+section.another .pingjia ul{
+    background-color: #f2f2f2;
+    padding-top:5px;
+}
+section.another .pingjia ul li{
+    height:86px;
+    list-style: none;
+    border-bottom:1px solid #ededed;
+}
+section.another .pingjia ul li .leftImg{
+    width:80px;
+    float:left;
+}
+section.another .pingjia ul li .leftImg img{
+    width:46px;
+    height:46px;
+    border-radius: 10px;
+    margin:8px 0;
+}
+section.another .pingjia ul li .leftImg p{
+    width:100px;
+    margin:-10px 0 0 -25px;
+    text-align:center;
+}
+section.another .pingjia ul li p a{
+    color:#737373;
+    font-size:12px;
+}
+section.another .pingjia ul li p a:hover{
+    color:#c00;
+    text-decoration: underline;
+}
+section.another .pingjia ul li .centerImg{
+    width:180px;
+    margin:15px;
+    float:left;
+}
+section.another .pingjia ul li .rightTime p.time{
+    color:#737373;
+    font-size:12px;
+    padding-top:20px;
+}
+section.another .liyi{
+    width:300px;
+    height:290px;
+    float:right;
+    margin-left:15px;
+}
+
 /*页脚*/
 footer{
     width:100%;
