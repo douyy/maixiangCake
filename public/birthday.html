@@ -1,105 +1,111 @@
- <style>
-        /*body{*/
-            /*min-width:1200px;*/
-        /*}*/
-        .content{
-            width:1200px;
-            margin:0 auto;
-        }
-        .shouye{
-            margin-bottom:20px;
-        }
-        .shouye a:hover{
-            color: red;
-            text-decoration: underline;
-        }
-        .nav{
-            margin-top:20px;
-        }
-        .nav li{
-            border:1px solid #ddd;
-            border-bottom:none;
-            height:50px;
-            line-height:50px;
-        }
-        .nav li:last-child{
-            border-bottom:1px solid #ddd;
-            padding-left:10px;
-        }
-        .nav li .left{
-            display: inline-block;
-            width:95px;
-            font-size:15px;
-            text-align: center;
-            background-color: #f3f3f3;
-        }
-        .nav li b{
-            color: red;
-        }
-        .nav li a{
-            margin-left:10px;
-            cursor:pointer;
-        }
-        .cur{
-            background-color:#cc0033;
-            color: white;
-            padding:5px 10px;
-            border-radius:20px;
-        }
-        .page{
-            margin-top:20px;
-        }
-        .page ul li{
-            border:1px solid #ddd;
-            padding:10px 15px;
-            float: left;
-            margin-left:5px;
-            background-color: #f4f4f4;
-        }
-        .box{
-            margin-top:20px;
-        }
-        .tip{
-            width:25%;
-            height:390px;
-            border-top:1px solid #ddd;
-            border-left:1px solid #ddd;
-            float: left;
-            box-sizing: border-box;
-            text-align: center;
-        }
-        .box .tip:nth-child(4n),.box .tip:last-child{
-            border-right:1px solid #ddd;
-        }
-        .box .tip:nth-last-child(4),.tip:nth-last-child(3),.tip:nth-last-child(2),.tip:nth-last-child(1){
-            border-bottom:1px solid #ddd;
-        }
-        img{
-            width:100%;
-        }
-        .box .tip p{
-            padding:2px 10px;
-        }
-        .box .tip .jieshao{
-            color:#f00;
-            -ms-text-overflow: ellipsis;
-            text-overflow: ellipsis;
-            overflow: hidden;
-            display: -webkit-box;
-            -webkit-box-orient:vertical;
-            -webkit-line-clamp:1;
-        }
-        .box .tip:hover{
-            border:4px solid #f4d0d0;
-        }
-        .box .tip .price{
-            color: #f00;
-            font-size:25px;
-        }
+    <style>
+    .content{
+        width:1200px;
+        margin:0 auto;
+    }
+    .shouye{
+        margin-bottom:20px;
+        margin-top:20px;
+    }
+    .shouye a:hover{
+        color: red;
+        text-decoration: underline;
+    }
+    .nav{
+        margin-top:20px;
+    }
+    .nav li{
+        border:1px solid #ddd;
+        border-bottom:none;
+        height:50px;
+        line-height:50px;
+    }
+    .nav li:last-child{
+        border-bottom:1px solid #ddd;
+        padding-left:10px;
+    }
+    .nav li .left{
+        display: inline-block;
+        width:95px;
+        font-size:15px;
+        text-align: center;
+        background-color: #f3f3f3;
+    }
+    .nav li b{
+        color: red;
+    }
+    .nav li a{
+        margin-left:10px;
+        cursor:pointer;
+    }
+    .cur{
+        background-color:#cc0033;
+        color: white;
+        padding:5px 10px;
+        border-radius:20px;
+    }
+    .page{
+        margin-top:20px;
+    }
+    .page ul li{
+        border:1px solid #ddd;
+        padding:10px 15px;
+        float: left;
+        margin-left:5px;
+        background-color: #f4f4f4;
+    }
+    .box{
+        margin-top:20px;
+    }
+    .tip{
+        width:25%;
+        height:390px;
+        border-top:1px solid #ddd;
+        border-left:1px solid #ddd;
+        float: left;
+        box-sizing: border-box;
+        text-align: center;
+    }
+    .box .tip:nth-child(4n),.box .tip:last-child{
+        border-right:1px solid #ddd;
+    }
+    .box .tip:nth-last-child(4),.tip:nth-last-child(3),.tip:nth-last-child(2),.tip:nth-last-child(1){
+        border-bottom:1px solid #ddd;
+    }
+    img{
+        width:100%;
+    }
+    .box .tip p{
+        padding:2px 10px;
+    }
+    .box .tip .jieshao{
+        color:#f00;
+        -ms-text-overflow: ellipsis;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-box-orient:vertical;
+        -webkit-line-clamp:1;
+    }
+    .box .tip:hover{
+        border:4px solid #f4d0d0;
+    }
+    .box .tip .price{
+        color: #f00;
+        font-size:25px;
+    }
+    .choose a{
+        margin-right:10px;
+    }
+
     </style>
+
     <div class="content">
-        <div class="shouye"><a href="index1.html">首页 </a>> <span>蛋糕</span></div>
-        <div>您已选择：<a href="" class="cur">生日蛋糕X</a></div>
+        <div class="shouye"><a href="/">首页 </a>> <span>蛋糕</span></div>
+        <div class="choose" ng-show="d!=null||d2!=null||d3!=null||d4!=null">您已选择：<a href="" class="cur" ng-show="d!=null" ng-click="hide(1)">{{d}}X</a>
+            <a href="" class="cur" ng-show="d2!=null" ng-click="hide(2)">{{d2}}X</a>
+            <a href="" class="cur" ng-show="d3!=null" ng-click="hide(3)">{{d3}}X</a>
+            <a href="" class="cur" ng-show="d4!=null" ng-click="hide(4)">{{d4}}X</a></div>
         <ul class="nav">
             <li>
                 <span class="left">按用途</span>
@@ -114,7 +120,7 @@
             <li>
                 <span class="left">按对象</span>
                 <span class="right">
-                    <a class="cur" ng-click="type2()" ng-class="{cur:d2==null}">全部</a>
+                    <a ng-click="type2()" ng-class="{cur:d2==null}">全部</a>
                     <a ng-click="type2('送恋人')" ng-class="{cur:d2=='送恋人'}">送恋人</a>
                     <a ng-click="type2('送家人')" ng-class="{cur:d2=='送家人'}">送家人</a>
                     <a ng-click="type2('送长辈')" ng-class="{cur:d2=='送长辈'}">送长辈</a>
@@ -125,7 +131,7 @@
             <li>
                 <span class="left">按材料</span>
                 <span class="right">
-                    <a class="cur" ng-click="type3()" ng-class="{cur:d3==null}">全部</a>
+                    <a ng-click="type3()" ng-class="{cur:d3==null}">全部</a>
                     <a ng-click="type3('水果蛋糕')" ng-class="{cur:d3=='水果蛋糕'}">水果蛋糕</a>
                     <a ng-click="type3('鲜奶蛋糕')" ng-class="{cur:d3=='鲜奶蛋糕'}">鲜奶蛋糕</a>
                     <a ng-click="type3('慕斯蛋糕')" ng-class="{cur:d3=='慕斯蛋糕'}">慕斯蛋糕</a>
@@ -141,7 +147,7 @@
             <li>
                 <span class="left">按造型</span>
                 <span class="right">
-                    <a class="cur" ng-click="type4()" ng-class="{cur:d4==null}">全部</a>
+                    <a ng-click="type4()" ng-class="{cur:d4==null}">全部</a>
                     <a ng-click="type4('欧式蛋糕')" ng-class="{cur:d4=='欧式蛋糕'}">欧式蛋糕</a>
                     <a ng-click="type4('圆形蛋糕')" ng-class="{cur:d4=='圆形蛋糕'}">圆形蛋糕</a>
                     <a ng-click="type4('多层蛋糕')" ng-class="{cur:d4=='多层蛋糕'}">多层蛋糕</a>
@@ -156,7 +162,7 @@
                 </span>
             </li>
             <li>
-                共有商品 <b>256</b> 件，当前为：第 <b>1</b> 到 <b>60</b> 件
+                共有商品 <b>111</b> 件，当前为：第 <b>1</b> 到 <b>60</b> 件
             </li>
         </ul>
         <div class="box">
@@ -197,3 +203,4 @@
             <!--</ul>-->
         <!--</div>-->
     </div>
+

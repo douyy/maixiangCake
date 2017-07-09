@@ -5,8 +5,8 @@
     <title>Title</title>
     <style>
         *{
-            padding: 0;
             margin: 0;
+            padding: 0;
         }
         a{
             text-decoration: none;
@@ -15,28 +15,33 @@
         ul li{
             list-style: none;
         }
-        header{
-            width: 100%;
-            height: 120px;
-        }
         section{
             width: 100%;
-            height: 2355px;
-            background-color: #f5f5f5;
-            padding-top: 20px;
+            height: 600px;
+            padding: 10px 0px;
         }
-        section .section{
+        .section{
             width: 1200px;
+            height: 600px;
             margin: 0 auto;
+        }
+        section .section .top{
+            width: 1200px;
+            height: 37px;
+            border: 1px solid #e5e5e5;
+            line-height: 37px
+        }
+        section .section .center{
+            width:1200px;
+            height: 772px;
         }
         section .section .left{
             width: 210px;
-            height: 1200px;
+            height: 772px;
             float: left;
-            background-color: white;
         }
         section .section .left h4{
-            margin-top: 30px;
+            margin-top: 10px;
             display: block;
             padding-left: 8px;
             line-height: 35px;
@@ -57,15 +62,94 @@
             border-bottom: 1px solid #e5e5e5;
         }
         section .section .right{
+            width: 980px;
+            height: 772px;
             float: left;
-            margin-left: 10px;
-            width: 895px;
-            height: 2355px;
-            background-color: white;
-            padding: 30px;
         }
-        section .section .right h1{
-            color: red;
+        section .section .right .top{
+            width: 980px;
+            margin-top: 10px;
+            margin-left: 10px;
+        }
+        section .section .right .top2{
+            height: 500px;
+            width: 920px;
+            padding: 0px 30px;
+        }
+        section .section .right .top2 h4{
+            margin-top: 10px;
+            margin-bottom: 10px;
+            color: #b2191b;
+        }
+        section .section .right .top2>div{
+            width: 980px;
+            height: 50px;
+        }
+        section .section .right .top2>div>button{
+            width: 120px;
+            height: 40px;
+            background-color: #e33a3d;
+            color: white;
+            border:none;
+            margin-left: 60px;
+            margin-top: 20px;
+        }
+        section .section .right .top2 .input{
+            text-align: right;
+            display: block;
+            width: 300px;
+            height: 40px;
+            line-height: 30px;
+        }
+        section .section .right .top2 input{
+            width: 160px;
+            height: 22px;
+        }
+        section .section .right .top2 .input,input{
+            float: left;
+        }
+        section .section .bottom{
+            width: 1200px;
+            height: 75px;
+            line-height: 75px;
+        }
+        section .xia1{
+            width: 200px;
+            float: left;
+            margin-left: 40px;
+            position: relative;
+        }
+        section .xia1:before{
+            content: "";
+            width: 20px;
+            height: 20px;
+            background-color: red;
+            background: url("img/f-ico1.png");
+            -webkit-background-size:20px 20px;
+            background-size:20px 20px;
+            position: absolute;
+            top: 26px;
+            left: -24px;
+        }
+        section .xia1:nth-child(2):before{
+            background: url("img/f-ico2.png");
+            -webkit-background-size:20px 20px;
+            background-size:20px 20px;
+        }
+        section .xia1:nth-child(3):before{
+            background: url("img/f-ico3.png");
+            -webkit-background-size:20px 20px;
+            background-size:20px 20px;
+        }
+        section .xia1:nth-child(4):before{
+            background: url("img/f-ico4.png");
+            -webkit-background-size:20px 20px;
+            background-size:20px 20px;
+        }
+        section .xia1:nth-child(5):before{
+            background: url("img/f-ico5.png");
+            -webkit-background-size:20px 20px;
+            background-size:20px 20px;
         }
     </style>
     <link rel="stylesheet" href="stylesheets/fencss.css">
@@ -133,15 +217,11 @@
             <div class="tishi">购物车中还没有商品，赶紧选购吧！</div>
         </div>
     </section>
-    <section>
-        <div class="section">
+<section>
+    <div class="section">
+        <div class="top"><a href="/">首页</a>＞帮助中心＞补交货款</div>
+        <div class="center">
             <div class="left">
-                <h4> 购物指南</h4>
-                <ul>
-                    <li><a href="">购物流程</a></li>
-                    <li><a href="">会员介绍</a></li>
-                    <li><a href="">联系客服</a></li>
-                </ul>
                 <h4>购物指南</h4>
                 <ul>
                     <li><a href="">购物流程</a></li>
@@ -178,31 +258,38 @@
                 </ul>
             </div>
             <div class="right">
-                <p style="font-size: 42px;">购物流程</p><br>
-                <h1>选购商品</h1><br>
-                <p> 1、挑选商品，可以通过搜索、所有商品分类导航等方式查找。</p><br>
-                <p>在搜索框中输入您想要的商品，点击搜索，即可找到商品。</p><br>
-                <img src="http://tphoutai.7caihua.com/Uploads/userfiles/image/20160530145229_49328.jpg" alt="">
-                <p>或者在左侧和上方导航栏处展开商品分类，选择心仪产品，直接点击即可。</p>
-                <img src="http://tphoutai.7caihua.com/Uploads/userfiles/image/20160530145245_68348.jpg" alt="">
-                <p>2、挑选好商品之后，挑选好点击“立即购买”按钮。</p>
-                <img src="http://tphoutai.7caihua.com/Uploads/userfiles/image/20160530145351_64505.jpg" alt="">
-                <p>3、进入填写核对订单信息页面，根据提示将订购人信息、收货人信息等内容填写清楚。</p><br>
-                <img src="http://tphoutai.7caihua.com/Uploads/userfiles/image/20160530145405_44346.jpg" alt="">
-                <p>4、信息确认无误，点击结算。</p><br>
-                <img src="http://tphoutai.7caihua.com/Uploads/userfiles/image/20160530145415_80290.jpg" alt="">
-                <h1>支付方式</h1><br>
-                <p>5、订单提交成功，会给予您成功提交的提示，接下来您只需付款，即结束整个购物之旅。</p><br>
-                <img src="http://tphoutai.7caihua.com/Uploads/userfiles/image/20160530145430_49482.jpg" alt="">
-                <p>6、付款方式有在线支付和银行汇款两种方式；在线支付包括储蓄卡网银支付、信用卡支付、第三方平台支付，由支付宝提供接口，确保您的资金安全，如果您是国外客户，可以选择国际/国外用户支付方式。
-                </p>
-                <img src="http://tphoutai.7caihua.com/Uploads/userfiles/image/20160530145444_43552.jpg" alt="">
-                <p>如果不能网上支付，您可以通过银行汇款的方式支付，并在支付成功后及时通知我们的客服人员帮您处理订单到款状态，以便及时安排订单，您可以选择招商银行、工商银行、建设银行、农业银行、交通银行、中国银行、邮政帐号等银行进行汇款。</p>
+                <div class="top" style="font-size: 18px;">订 单 查 询</div>
+                <div class="top top2">
+                    <h4>一、请输入订单号、订货人手机查询！</h4>
+                    <div>
+                        <span class="input">请填写订单号：</span> <input type="text">
+                        <button>补交</button>
+                    </div>
+                    <div>
+                        <span class="input">请输入订货人手机：</span> <input type="text">
+                    </div>
 
+                    <p>说明：本查询为快捷查询系统，不论是否注册用户均可以查询，
+                        必须与提交订单时填写方式一致， 有任何疑问请随时与我们联络，
+                        24小时服务热线：400-658-1177，谢谢！</p><br>
+                    <h4>二、如果您忘记订单号码，请用以下查询！</h4>
+                    <div>
+                        <span class="input">输入订货人电话：</span> <input type="text">
+                        <button>补交</button>
+                    </div>
+                    <div>
+                        <span class="input">输入收货人电话：</span> <input type="text">
+                    </div>
 
+                    <p>说明：本查询为快捷查询系统，不论是否注册用户均可以查询，双方电话都要输入，
+                        必须与提交订单时填写方式一致，
+                        有任何疑问请随时与我们联络，24小时服务热线：400-658-1177，谢谢！</p>
+                </div>
             </div>
         </div>
-    </section>
+    </div>
+
+</section>
     <footer>
         <div class="inner_c">
             <div class="footer_top">
