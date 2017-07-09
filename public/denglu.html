@@ -249,6 +249,7 @@
             <img src="img/android_ewm.png" alt="">
             <div>关注七彩蛋糕微信
                 实时跟踪订单状态</div>
+
         </div>
     </div>
 </section>
@@ -259,19 +260,22 @@
     //app.controller(name,constructor)
     app.controller('studentCtry1',function($scope,$http) {
         //简写
+        $scope.a = {};
         $scope.denglu = function (a) {
             xuanxin(a)
 
         };
         function xuanxin(a) {
+            console.log(a.name);
             $http.get('/s',a).then(
                 function (res) {
-                    var dataa=res.data.date;
+                    var dataa = res.data.date;
                     console.log(a.name);
                     for(var i=1;i< dataa.length ;i++){
                         if((dataa[i].name == a.name)&&(dataa[i].password == a.password)){
-                            console.log(1);
-                                self.location.href="index.html";
+                                console.log(1);
+                                location.href="index.html";
+                        }else{
                         }
                     }
                 }
