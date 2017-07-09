@@ -262,11 +262,19 @@
         //简写
         $scope.a = {};
         $scope.denglu = function (a) {
-            xuanxin(a)
+            console.log(a.name);
+            if(a.name ==null){
+                alert("账号不能为空");
+            }else if(a.password ==null){
+                alert("密码不能为空");
+            }
+            else{
+                xuanxin(a);
+            }
+
 
         };
         function xuanxin(a) {
-            console.log(a.name);
             $http.get('/s',a).then(
                 function (res) {
                     var dataa = res.data.date;
@@ -276,6 +284,8 @@
                                 console.log(1);
                                 location.href="index.html";
                         }else{
+                            alert("密码错误");
+                            return;
                         }
                     }
                 }
