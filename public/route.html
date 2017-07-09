@@ -4,13 +4,206 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="stylesheets/style.css">
+    <link rel="stylesheet" href="stylesheets/fencss.css">
 </head>
 <body ng-app="app">
-
+    <header>
+        <div class="inner_c">
+            <div class="header_left">
+                <p>七彩蛋糕-蛋糕配送专家</p>
+                <p>
+                    <a href="denglu.html">登录</a>
+                    <span>|</span>
+                    <a href="zhuce.html">注册</a>
+                </p>
+            </div>
+            <div class="header_right">
+                <ul>
+                    <li class="neirong nr">
+                        <a href="#" class="hov">我的账户</a>
+                        <ul class="list">
+                            <li>我的订单</li>
+                            <li>补交货款</li>
+                            <li>我的余额</li>
+                            <li>我的收藏</li>
+                            <li>用户中心</li>
+                            <li>修改资料</li>
+                            <span></span>
+                        </ul>
+                    </li>
+                    <li class="line">|</li>
+                    <li class="neirong"><a href="#" class="red">补交货款</a></li>
+                    <li class="line">|</li>
+                    <li class="neirong"><a href="#" class="red">付款方式</a></li>
+                    <li class="line">|</li>
+                    <li class="neirong"><a href="#" class="hov">配送查询</a></li>
+                    <li class="line">|</li>
+                    <li class="neirong"><a href="#" class="hov">订单查询</a></li>
+                    <li class="line">|</li>
+                    <li class="neirong"><a href="#" class="hov">帮助中心</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!--section-->
+    <section class="sousuo">
+        <div class="sec_left">
+            <img src="https://www.dangao.com/Tpl/2016skin/Public/images/logo.png" alt="">
+        </div>
+        <div class="sec_center">
+            <form>
+                <input type="text"><span class="ss">搜索</span>
+                <p class="wz">
+                    <span><a href="#">生日蛋糕</a></span>
+                    <span><a href="#">巧克力蛋糕</a></span>
+                    <span class="curr wan"><a href="#">快到碗里来</a></span>
+                    <span><a href="#">生日蛋糕</a></span>
+                    <span><a href="#">商业用花</a></span>
+                </p>
+            </form>
+        </div>
+        <div class="sec_right">
+            <div class="gwc">
+                <i></i>
+                <a href="#">我的购物车 ></a>
+            </div>
+            <div class="tishi">购物车中还没有商品，赶紧选购吧！</div>
+        </div>
+    </section>
+    <!--nav-->
+    <nav>
+        <div class="inner_c">
+            <div class="nav_left">
+                <div class="fenlei">全部商品分类</div>
+                <!--商品列表-->
+                <div class="productList">
+                    <ul>
+                        <li>
+                            <a href="">蛋糕、生日蛋糕、卡通蛋糕</a>
+                            <span>></span>
+                        </li>
+                        <li>
+                            <a href="">鲜花、玫瑰、百合、生日鲜花</a>
+                            <span>></span>
+                        </li>
+                        <li>
+                            <a href="">红酒、法国红酒、白葡萄酒</a>
+                            <span>></span>
+                        </li>
+                        <li>
+                            <a href="">巧克力、费列罗、德芙</a>
+                            <span>></span>
+                        </li>
+                        <li>
+                            <a href="">浪漫组合、蛋糕+鲜花</a>
+                            <span>></span>
+                        <li>
+                            <a href="">毛绒玩具、可爱熊</a>
+                            <span>></span>
+                        </li>
+                        <li>
+                            <a href="">卡通花束、创意花束</a>
+                            <span>></span>
+                        </li>
+                        <li>
+                            <a href="">商业花篮、开业用花</a>
+                            <span>></span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="nav_right">
+                <ul>
+                    <li><a href="#">首页</a></li>
+                    <li><a href="route.html#!/1">生日蛋糕</a></li>
+                    <li><a href="route.html#!/2">儿童蛋糕</a></li>
+                    <li><a href="route.html#!/3">祝寿蛋糕</a></li>
+                    <li><a href="route.html#!/4">水果蛋糕</a></li>
+                    <li><a href="route.html#!/5">多层蛋糕</a></li>
+                    <li><a href="https://www.dangao.com/Lm11-default-60-all,all,all,all,all,all,all,all,all-0.html">鲜花+蛋糕</a></li>
+                    <li><a href="https://www.dangao.com/Flower-default-60-all,all,all,all,all,all,all,all,all-0.html">鲜花</a></li>
+                    <li><a href="https://www.dangao.com/wine-default-20-all,all,all,all-0.html">红酒</a></li>
+                    <li>400-658-1177</li>
+                </ul>
+                <div class="yongtu">
+                    <table class="list"></table>
+                    <div class="rightImg"></div>
+                </div>
+            </div>
+        </div>
+    </nav>
     <div ng-view>
 
     </div>
-
+    <footer>
+        <div class="inner_c">
+            <div class="footer_top">
+                <ul>
+                    <li><img src="./images/f-ico1.png" alt="">全国3000+地区免费送</li>
+                    <li><img src="./images/f-ico2.png" alt="">1-3小时急速送达</li>
+                    <li><img src="./images/f-ico3.png" alt="">当天制作，新鲜上门</li>
+                    <li><img src="./images/f-ico4.png" alt="">全年无休，个性定制</li>
+                    <li><img src="./images/f-ico5.png" alt="">支付宝，微信线上无忧支付</li>
+                </ul>
+            </div>
+            <div class="footer_center">
+                <dl>
+                    <dt>购物指南</dt>
+                    <dd><a href="">购物指南</a></dd>
+                    <dd><a href="">会员介绍</a></dd>
+                    <dd><a href="">联系客服</a></dd>
+                </dl>
+                <dl>
+                    <dt>配送方式</dt>
+                    <dd><a href="">送货上门</a></dd>
+                    <dd><a href="">门店自取</a></dd>
+                    <dd><a href="">配送范围</a></dd>
+                    <dd><a href="">联系我们</a></dd>
+                </dl>
+                <dl>
+                    <dt>支付方式</dt>
+                    <dd><a href="">在线支付</a></dd>
+                    <dd><a href="">银行汇款</a></dd>
+                    <dd><a href="">货到付款</a></dd>
+                </dl>
+                <dl>
+                    <dt>服务支持</dt>
+                    <dd><a href="">售后服务</a></dd>
+                    <dd><a href="">退款说明</a></dd>
+                    <dd><a href="">取消订单</a></dd>
+                </dl>
+                <dl>
+                    <dt>关注我们</dt>
+                    <dd><a href="">微信公众号</a></dd>
+                    <dd><a href="">七彩蛋糕APP</a></dd>
+                    <dd><a href="">情人节特别提示</a></dd>
+                </dl>
+                <dl>
+                    <dt>联系我们</dt>
+                    <dd><a href="">联系我们</a></dd>
+                </dl>
+                <div class="number">
+                    <p class="num1">400-658-1177</p>
+                    <p class="num2">周一至周日 24小时服务</p>
+                    <p class="num3"><a href="">24小时在线服务</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="footer_bottom">
+            <div class="center">
+                <img src="./images/logo-footer.png" alt="">
+                <p class="desc"><a href="">联系我们|关于我们|招商加盟|问题反馈|鲁ICP备11002183号|站点地图</a></p>
+                <p class="desc">Copyright©1997-2016 dangao.com All rights reserved. 青州七彩时尚电子商务有限公司-七彩蛋糕-版权所有,禁止非法复制</p>
+                <ul>
+                    <li><img src="./images/f-logo-1.png" alt=""></li>
+                    <li><img src="./images/f-logo-2.png" alt=""></li>
+                    <li><img src="./images/f-logo-3.png" alt=""></li>
+                    <li><img src="./images/f-logo-4.png" alt=""></li>
+                    <li><img src="./images/f-logo-5.png" alt=""></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
 <script src="javascripts/jquery.min.js"></script>
 <script src="javascripts/jquery.imagezoom.min.js"></script>
 <script src="javascripts/angular.min.js"></script>
@@ -19,7 +212,7 @@
     var appModule = angular.module('app',['ngRoute']);
 
     appModule.config(function($routeProvider){
-        $routeProvider.when('/',{
+        $routeProvider.when('/:index',{
             templateUrl:'birthday.html',
             controller:'birthdayCtrl'
         }).when('/detail/:id',{
@@ -27,7 +220,19 @@
             controller:'detailCtrl'
         })
     })
-    appModule.controller('birthdayCtrl',function($scope,$http){
+    appModule.controller('birthdayCtrl',function($scope,$http,$routeParams){
+       // console.log($routeParams.index);
+        if($routeParams.index == 1){
+            $scope.d = '生日蛋糕';
+        }else if($routeParams.index == 2){
+            $scope.d4 = '卡通蛋糕';
+        }else if($routeParams.index == 3){
+            $scope.d = '祝寿蛋糕';
+        }else if($routeParams.index == 4){
+            $scope.d3 = '水果蛋糕';
+        }else if($routeParams.index == 5){
+            $scope.d4 = '多层蛋糕';
+        }
         $http.get('/birthday').then(function(res){
             //console.log(res.data.data);
             if(res.data.success){
@@ -40,7 +245,6 @@
         }
         $scope.type2 =  function(data){
             $scope.d2 = data;
-            console.log($scope.d2);
         }
         $scope.type3 =  function(data){
             $scope.d3 = data;
@@ -48,7 +252,17 @@
         $scope.type4 =  function(data){
             $scope.d4 = data;
         }
-
+        $scope.hide = function(data){
+           if(data == 1){
+               $scope.d = undefined;
+           }else if(data == 2){
+                $scope.d2 = undefined;
+           }else if(data == 3){
+               $scope.d3 = undefined;
+           }else if(data == 4){
+               $scope.d4 = undefined;
+           }
+        }
     });
 
     appModule.controller('detailCtrl',function($scope,$http,$routeParams){
@@ -67,6 +281,62 @@
             }
         });
     })
+
+    $('.nr').mouseover(function(){
+        $('.list').show();
+    });
+    $('.nr').mouseleave(function(){
+        $('.list').hide();
+    });
+    $('.wz span').mouseover(function(){
+        $(this).addClass('curr').siblings().removeClass('curr');
+    });
+    //购物车
+    $('.gwc').mouseover(function(){
+        $(this).css({
+            'box-shadow':'0 0 5px rgba(0,0,0,0.2)',
+            'border-bottom':'none'
+        });
+        $('.tishi').show();
+    });
+    $('.gwc').mouseleave(function(){
+        $(this).css({
+            'box-shadow':'none',
+            'border-bottom':'1px solid #ddd'
+        });
+        $('.tishi').hide();
+    });
+    $('.productList ul li').mouseover(function () {
+        $('table').empty();
+        $('.rightImg').empty();
+        $('.yongtu').show();
+        var self = $(this).index();
+        $.get('/users', function (data) {
+            var u = data[self].url;
+            $('<img src="' + u + '">').appendTo($('.rightImg'));
+            for (var j = 0; j < data[self].content.length; j++) {
+                var s = data[self].content[j];
+                $('<tr style="height:40px;font-size:14px;line-height:35px;"></tr>').append('<td style="width:80px;padding-left:20px;"><a href="#" style="color:#666;">' + s.type + '&nbsp;&nbsp;&nbsp;>' + '</a></td>')
+                    .append('<td style="border-bottom:1px solid #e0e0e0;"><a href="#" style="color:#666;">' + s.neirong + '</a></td>')
+                    .appendTo($('table'));
+            }
+            $('table tr td a').mouseover(function () {
+                $(this).css('color', '#c00');
+            });
+            $('table tr td a').mouseleave(function () {
+                $(this).css('color', '#666');
+            });
+        });
+    });
+//            $('table').mouseover(function(){
+//                $('.productList').show();
+//            });
+//            $('table').mouseleave(function(){
+//                $('.productList').hide();
+//            });
+    $('.yongtu').mouseleave(function () {
+        $(this).hide();
+    });
 </script>
 </body>
 </html>
