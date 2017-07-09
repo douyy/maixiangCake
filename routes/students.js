@@ -28,4 +28,33 @@ router.post('/',(req,res)=>{
 
     })
 });
+router.post('/',(req,res)=>{
+    let sql = `INSERT INTO yonghu SET ?`;
+    conn.query(sql,req.body,(err,results)=>{
+        if (err) {
+            return res.json({success:false,date:err.message})
+        }
+        res.json({success:true})
+
+    })
+});
+router.put('/',(req,res)=>{
+	//请求body内容
+	console.log(req.body);
+	var sql = `UPDATE students 
+			   SET ? 
+			   WHERE id=?`;
+	conn.query(sql,[req.body,req.body.id]
+		,(err,result)=>{
+		if (err) {
+			return res.json({success:false,data:err.message})
+		}
+		console.log(result);
+		if (result.affectedRows > 0) {
+			return res.json({success:true,data:result.insertId});
+		}
+		res.json({success:false,data:'插入失败'})
+	})
+	//res.send({data:req.body.id});
+})
 module.exports = router;
