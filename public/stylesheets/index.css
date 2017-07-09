@@ -65,7 +65,7 @@ header .inner_c .header_right ul li a{
     color:#735749;
     position:relative;
 }
-header .inner_c .header_right ul li:nth-child(1) a::after{
+header .inner_c .header_right ul li.nr a.hov::after{
     content:'';
     position:absolute;
     right:-10px;
@@ -578,6 +578,39 @@ section.rmtj .shangpin ul li:nth-child(1){
     border-left:1px solid #ededed;
     height:360px;
 }
+section.rmtj .shangpin ul li:nth-child(1) a img{
+    float: left;
+    margin-top:40px;
+}
+section.rmtj .shangpin ul li:nth-child(1) .text{
+    float:left;
+    height:360px;
+}
+section.rmtj .shangpin ul li:nth-child(1) .text h2{
+    margin-top:100px;
+    font-size:25px;
+}
+section.rmtj .shangpin ul li:nth-child(1) .text p{
+    margin-top:20px;
+    color:#666;
+}
+section.rmtj .shangpin ul li:nth-child(1) .text p:last-child{
+    margin-top:30px;
+    font-size:25px;
+    color:#f00;
+}
+section.rmtj .shangpin ul li:nth-child(1) .text p:last-child span:last-child{
+    width:80px;
+    height:30px;
+    background-color: #D91B25;
+    text-align:center;
+    line-height:30px;
+    border-radius:5px;
+    color:#fff;
+    font-size:13px;
+    margin-left:50px;
+    display:inline-block;
+}
 section.rmtj .shangpin ul li:nth-child(4){
     border-left:1px solid #ededed;
 }
@@ -587,6 +620,24 @@ section.rmtj .shangpin ul li:nth-child(7) img{
 }
 section.rmtj .shangpin ul li img{
     width:290px;
+}
+section.rmtj .shangpin ul li .bot_text{
+    margin-top:-30px;
+}
+section.rmtj .shangpin ul li .bot_text p{
+    width:290px;
+    text-align:center;
+    color:#333;
+    font-size:14px;
+    line-height:25px;
+}
+section.rmtj .shangpin ul li .bot_text p:nth-child(2){
+    color:#f00;
+}
+section.rmtj .shangpin ul li .bot_text p:nth-child(3){
+    font-size:25px;
+    color:#f00;
+    margin-top:10px;
 }
 section.rmtj .shangpin ul li:hover{
     border:3px solid #f4d0d0;

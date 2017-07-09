@@ -2,11 +2,8 @@
 <html>
 <head>
     <title>{{title}}</title>
-    <meta name="viewport" content="device-width=width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
-    <link rel='stylesheet' href='/stylesheets/cssreset-min.css' />
     <link rel='stylesheet' href='/stylesheets/style.css' />
     <link rel='stylesheet' href='/stylesheets/index.css' />
-
 </head>
 <body>
 <header>
@@ -28,7 +25,7 @@
                         <li>补交货款</li>
                         <li>我的余额</li>
                         <li>我的收藏</li>
-                        <li>用户中心</li>
+                        <li><a href="yonghuzhongxin.html">用户中心</a></li>
                         <li>修改资料</li>
                         <span></span>
                     </ul>
@@ -36,18 +33,105 @@
                 <li class="line">|</li>
                 <li class="neirong"><a href="#" class="red">补交货款</a></li>
                 <li class="line">|</li>
-                <li class="neirong"><a href="#" class="red">付款方式</a></li>
+                <li class="neirong"><a href="fukuanfangshi.html" class="red">付款方式</a></li>
                 <li class="line">|</li>
-                <li class="neirong"><a href="#" class="hov">配送查询</a></li>
+                <li class="neirong"><a href="peisongchaxun.html" class="hov">配送查询</a></li>
                 <li class="line">|</li>
-                <li class="neirong"><a href="#" class="hov">订单查询</a></li>
+                <li class="neirong"><a href="dingdanchaxun.html" class="hov">订单查询</a></li>
                 <li class="line">|</li>
-                <li class="neirong"><a href="#" class="hov">帮助中心</a></li>
+                <li class="neirong"><a href="bangzhuzhongxin.html" class="hov">帮助中心</a></li>
             </ul>
         </div>
     </div>
 </header>
+<section class="sousuo">
+    <div class="sec_left">
+        <img src="https://www.dangao.com/Tpl/2016skin/Public/images/logo.png" alt="">
+    </div>
+    <div class="sec_center">
+        <form>
+            <input type="text"><span class="ss">搜索</span>
+            <p class="wz">
+                <span><a href="">生日蛋糕</a></span>
+                <span><a href="#">巧克力蛋糕</a></span>
+                <span class="cur wan"><a href="#">快到碗里来</a></span>
+                <span><a href="#">生日蛋糕</a></span>
+                <span><a href="#">商业用花</a></span>
+            </p>
+        </form>
+    </div>
+    <div class="sec_right">
+        <div class="gwc">
+            <i></i>
+            <a href="#">我的购物车 ></a>
+        </div>
+        <div class="tishi">购物车中还没有商品，赶紧选购吧！</div>
+    </div>
+</section>
+<nav>
+    <div class="inner_c">
+        <div class="nav_left">
+            <div class="fenlei">全部商品分类</div>
+            <!--&lt;!&ndash;商品列表&ndash;&gt;-->
+            <!--<div class="productList">-->
+                <!--<ul>-->
+                    <!--<li>-->
+                        <!--<a href="">蛋糕、生日蛋糕、卡通蛋糕</a>-->
+                        <!--<span>></span>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                        <!--<a href="">鲜花、玫瑰、百合、生日鲜花</a>-->
+                        <!--<span>></span>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                        <!--<a href="">红酒、法国红酒、白葡萄酒</a>-->
+                        <!--<span>></span>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                        <!--<a href="">巧克力、费列罗、德芙</a>-->
+                        <!--<span>></span>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                        <!--<a href="">浪漫组合、蛋糕+鲜花</a>-->
+                        <!--<span>></span>-->
+                    <!--<li>-->
+                        <!--<a href="">毛绒玩具、可爱熊</a>-->
+                        <!--<span>></span>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                        <!--<a href="">卡通花束、创意花束</a>-->
+                        <!--<span>></span>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                        <!--<a href="">商业花篮、开业用花</a>-->
+                        <!--<span>></span>-->
+                    <!--</li>-->
+                <!--</ul>-->
+            <!--</div>-->
+        </div>
+        <div class="nav_right">
+            <ul>
+                <li><a href="index.html">首页</a></li>
+                <li><a href="birthday.html">生日蛋糕</a></li>
+                <li><a href="#">儿童蛋糕</a></li>
+                <li><a href="#">祝寿蛋糕</a></li>
+                <li><a href="#">水果蛋糕</a></li>
+                <li><a href="#">多层蛋糕</a></li>
+                <li><a href="#">鲜花+蛋糕</a></li>
+                <li><a href="#">鲜花</a></li>
+                <li><a href="#">红酒</a></li>
+                <li>400-658-1177</li>
+            </ul>
+            <div class="yongtu">
+                <table class="list"></table>
+                <div class="rightImg"></div>
+            </div>
+        </div>
+    </div>
+</nav>
+
 {{{body}}}
+
 <footer>
     <div class="inner_c">
         <div class="footer_top">
@@ -117,5 +201,33 @@
         </div>
     </div>
 </footer>
+
+<script src="/js/jquery.min.js"></script>
+<script>
+    $('.nr').mouseover(function(){
+        $('.list').show();
+    });
+    $('.nr').mouseleave(function(){
+        $('.list').hide();
+    });
+    $('.wz span').mouseover(function(){
+        $(this).addClass('cur').siblings().removeClass('cur');
+    });
+    //购物车
+    $('.gwc').mouseover(function(){
+        $(this).css({
+            'box-shadow':'0 0 5px rgba(0,0,0,0.2)',
+            'border-bottom':'none'
+        });
+        $('.tishi').show();
+    });
+    $('.gwc').mouseleave(function(){
+        $(this).css({
+            'box-shadow':'none',
+            'border-bottom':'1px solid #ddd'
+        });
+        $('.tishi').hide();
+    });
+</script>
 </body>
 </html>
