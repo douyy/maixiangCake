@@ -65,7 +65,7 @@ header .inner_c .header_right ul li a{
     color:#735749;
     position:relative;
 }
-header .inner_c .header_right ul li:nth-child(1) a::after{
+header .inner_c .header_right ul li.neirong:nth-child(1)>a::after{
     content:'';
     position:absolute;
     right:-10px;
