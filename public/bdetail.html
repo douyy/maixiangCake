@@ -74,12 +74,7 @@
     }
     .middle{
         margin-top:20px;
-    }
-    .box{
-        width:422px;
-        height:300px;
-        border:1px solid red;
-        float: left;
+        overflow: hidden;
     }
     .middle .detail{
         float: left;
@@ -174,7 +169,6 @@
         margin-bottom: 10px;
         padding:5px 15px;
         position: relative;
-        z-index:-2;
         cursor: pointer;
     }
     .middle .detail div.size ul li::before{
@@ -193,7 +187,7 @@
     .middle .detail div.size ul li.check::before{
         display: block;
     }
-    .middle .detail div.size ul li:hover{
+    .middle .detail div.size ul li:not(.check):hover{
         border:1px solid black;
     }
     .middle .detail div.xuan{
@@ -213,7 +207,7 @@
     .middle .detail .bottom table{
         float: left;
     }
-    .middle .detail .bottom table,tr,td{
+    .middle .detail .bottom table,.middle .detail .bottom table tr,.middle .detail .bottom table td{
         border-collapse:collapse;
         border:1px solid #dddddd;
     }
@@ -271,8 +265,248 @@
     .middle .detail .bottom a.join:hover{
         background-color: #f5345e;
     }
+    /*鼠标展示*/
+    .box{
+        width:422px;
+        float: left;
+        /*border:1px solid red;*/
+    }
+    .tb-pic a{
+        display:table-cell;
+        text-align:center;
+        vertical-align:middle;
+    }
+    .tb-pic a img{vertical-align:middle;}
+    .sm{
+        width:422px;
+        overflow: hidden;
+        position: relative;
+    }
+    .sm span{
+        display: inline-block;
+        width:24px;
+        height:62px;
+        float: left;
+        border:1px solid #eee;;
+        margin-top:10px;
+        line-height:62px;
+        text-align: center;
+        color: gray;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    .sm span.right{
+        position: absolute;
+        top:0;
+        right:0;
+        color: red;
+    }
+    .tb-thumb{
+        width:700px;
+        margin:10px 0 0 35px;
+        position: relative;
+    }
+    .tb-thumb li{
+        background:none repeat scroll 0 0 transparent;
+        float:left;
+        width:62px;
+        height:62px;
+        margin:0 8px 0 0;
+        overflow:hidden;
+        padding:1px;
+    }
+    .tb-thumb .tb-selected div{
+        border:2px solid #d22147;
+    }
+    .tb-thumb li img{
+        width:100%;
+    }
+    .tb-thumb li div{
+        border:1px solid #CDCDCD;
+    }
+    .tb-thumb li:nth-child(5){
+        margin-right:35px;
+    }
+    div.zoomDiv{
+        z-index:999;
+        position:absolute;
+        background:#ffffff;
+        border:1px solid black;
+        display:none;
+        text-align:center;
+        overflow:hidden;
+    }
+    div.zoomMask{position:absolute;cursor:crosshair;z-index:1;
+        width:50px;height:50px;
+        background-color: rgba(255,255,255,0.5);
+        border:1px solid red;
+    }
+    .content .bottom{
+        margin-top:40px;
+    }
+    .content .bottom .bleft{
+        float: left;
+        width:198px;
+    }
+    .content .bottom .bright{
+        float: left;
+        border:1px solid #dedede;
+        width:990px;
+    }
+    .content .bottom .bright .b-top{
+        border-bottom:1px solid #E4393C;
+    }
+    .content .bottom .bright .b-top a{
+        display: inline-block;
+        padding:0 20px;
+        height:40px;
+        text-align: center;
+        line-height:40px;
+    }
+    .content .bottom .bright .b-top a.current{
+        background-color: #E4393C;
+        color: #fff;
+    }
+    .content .bottom .bright .b-top a.jj{
+        height:27px;
+        line-height:27px;
+        float: right;
+        margin:6px 10px 0 0;
+    }
+    .content .bottom .bright .b-con{
+        width:900px;
+        margin:0 auto;
+    }
+    .content .bottom .bright .b-con>img{
+        margin-top:20px;
+    }
+    .content .bottom .bright .b-con .head{
+        margin-top:20px;
+        border-bottom:3px #D93438 solid;
+    }
+    .content .bottom .bright .b-con .head span{
+        display: inline-block;
+        background-color: #D93438;
+        width:290px;
+        height:28px;
+        color: #fff;
+        line-height:28px;
+        padding-left:30px;
+        background:linear-gradient(-135deg, transparent 2em, #D93438 0);
+    }
+    .content .bottom .bright .b-con .head .logo{
+        float: right;
+        width:90px;
+    }
+    .content .bottom .bright .b-con table{
+        margin-bottom:30px;
+    }
+    .content .bottom .bright .b-con table tr td{
+        padding:6px;
+    }
+    .content .bottom .bright p.t{
+        color: #888;
+        font-size:12px;
+        text-align: center;
+        height:40px;
+        width:990px;
+        border-bottom:1px solid #dddddd;
+    }
+    .content .bottom .bright .pingjia .head{
+        height:109px;
+        border-bottom:1px solid #dddddd;
+    }
+    .content .bottom .bright .pingjia .head>div{
+        font-size:12px;
+        height:109px;
+        float: left;
+    }
+    .content .bottom .bright .pingjia .head div:first-child{
+        text-align: center;
+        width:146px;
+    }
+    .content .bottom .bright .pingjia .head div:first-child span{
+        font-weight:900;
+        text-align: center;
+        color: #e01d20;
+        font-size:30px;
+    }
+    .content .bottom .bright .pingjia .head div:first-child span b{
+        font-size: 53px;
+    }
+    .content .bottom .bright .pingjia .head div:nth-child(2){
+        width:100px;
+        border-right:1px solid #dddddd;
+    }
+    .content .bottom .bright .pingjia .head div:nth-child(2) p{
+        line-height:30px;
+    }
+    .content .bottom .bright .pingjia .head div:nth-child(3){
+        width:518px;
+        border-right:1px solid #dddddd;
+        padding-left:20px;
+    }
+    .content .bottom .bright .pingjia .head div:nth-child(3) p{
+        margin-top:10px;
+    }
+    .content .bottom .bright .pingjia .head div:nth-child(3) span{
+        padding:5px;
+        background-color: #f8e9c2;
+        margin-right:10px;
+        float: left;
+        margin-top:5px;
+    }
+    .content .bottom .bright .pingjia div:nth-child(4){
+        width:122px;
+    }
+    .content .bottom .bright .pingjia div:nth-child(4) button{
+        border:1px solid #d1d1d1;
+        background-color: rgba(0,0,0,0.03);
+        text-align: center;
+        color: #333;
+        cursor: pointer;
+        width:89px;
+        height:25px;
+        margin:30px 0 0 10px;
+        outline:none;
+    }
+    /*.content .bottom .bright .pingjia .inner{*/
+        /*width:988px;*/
+        /*margin:0 auto;*/
+    /*}*/
+    .content .bottom .bright .pingjia .inner .tip{
+        margin-top:20px;
+        overflow: hidden;
+    }
+    .content .bottom .bright .pingjia .inner .tip .left{
+        width:90px;
+        text-align: center;
+        float: left;
+        margin-left:8px;
+    }
+    .content .bottom .bright .pingjia .inner .tip .right{
+        float: left;
+        margin-left:10px;
+        background-color: #fafafa;
+        width:841px;
+        height:70px;
+        padding:10px;
+        border:1px solid #dedede;
+        position: relative;
+    }
+    .content .bottom .bright .pingjia .inner .tip .right::before{
+        content: '';
+        width:10px;
+        height:14px;
+        background:url('images/proicon5.png') no-repeat -47px -75px;
+        position: absolute;
+        top:18px;
+        left:-10px;
+    }
+    .content .bottom .bright .pingjia .inner .tip .right p:last-child{
+        margin-top:10px;
+    }
 </style>
-
 
 <div class="content">
     <div class="top">
@@ -285,7 +519,24 @@
         <p class="dh">我在线，点我咨询</p>
     </div>
     <div class="middle">
-        <div class="box"></div>
+        <div class="box">
+            <div class="tb-booth tb-pic">
+                <a href="{{detail2.bimg1}}"><img src="{{detail2.mimg1}}" rel="{{detail2.bimg1}}" class="jqzoom"/></a>
+            </div>
+            <div class="sm">
+                <span id="left"><</span>
+                <ul class="tb-thumb" id="thumblist">
+                    <li class="tb-selected"><div class="tb-pic tb-s40"><a href="javascripts:;"><img src="{{detail2.simg1}}" mid="{{detail2.mimg1}}" big="{{detail2.bimg1}}"></a></div></li>
+                    <li><div class="tb-pic tb-s40"><a href="javascripts:;"><img  src="{{detail2.simg2}}" mid="{{detail2.mimg2}}" big="{{detail2.bimg2}}"></a></div></li>
+                    <li><div class="tb-pic tb-s40"><a href="javascripts:;"><img src="{{detail2.simg3}}" mid="{{detail2.mimg3}}" big="{{detail2.bimg3}}"></a></div></li>
+                    <li><div class="tb-pic tb-s40"><a href="javascripts:;"><img src="{{detail2.simg4}}" mid="{{detail2.mimg4}}" big="{{detail2.bimg4}}"></a></div></li>
+                    <li><div class="tb-pic tb-s40"><a href="javascripts:;"><img src="{{detail2.simg5}}" mid="{{detail2.mimg5}}" big="{{detail2.bimg5}}"></a></div></li>
+                    <li><div class="tb-pic tb-s40"><a href="javascripts:;"><img  src="{{detail2.simg2}}" mid="{{detail2.mimg2}}" big="{{detail2.bimg2}}"></a></div></li>
+                    <li><div class="tb-pic tb-s40"><a href="javascripts:;"><img src="{{detail2.simg3}}" mid="{{detail2.mimg3}}" big="{{detail2.bimg3}}"></a></div></li>
+                </ul>
+                <span class="right" id="right">></span>
+            </div>
+        </div>
         <div class="detail">
             <p class="name">{{detail.name}}</p>
             <p class="id">产品编号：{{detail.id}}</p>
@@ -304,16 +555,16 @@
                     （<a href="">共16870条评论</a>）
                 </p>
             </div>
-            <div class="size">
+            <div class="size zc">
                 <p>选择尺寸:</p>
                 <ul>
-                    <li class="check" title="八英寸(20CM,2-3人食用)">八英寸(20CM,2-3人食用)</li>
-                    <li title="十英寸(25CM,4-6人食用)">十英寸(25CM,4-6人食用)</li>
-                    <li title="十二英寸(30CM,6-9人食用)">十二英寸(30CM,6-9人食用)</li>
-                    <li title="十四英寸(35CM,9-12人食用)">十四英寸(35CM,9-12人食用)</li>
-                    <li title="十六英寸(40CM,12-15人食用)">十六英寸(40CM,12-15人食用)</li>
-                    <li title="十八英寸(45CM,15-18人食用)">十八英寸(45CM,15-18人食用)</li>
-                    <li title="二十英寸(50CM,中型聚餐)">二十英寸(50CM,中型聚餐)</li>
+                    <li class="check" title="八英寸(2-3人食用)">八英寸(20CM,2-3人食用)</li>
+                    <li title="十英寸(4-6人食用)">十英寸(25CM,4-6人食用)</li>
+                    <li title="十二英寸(6-9人食用)">十二英寸(30CM,6-9人食用)</li>
+                    <li title="十四英寸(9-12人食用)">十四英寸(35CM,9-12人食用)</li>
+                    <li title="十六英寸(12-15人食用)">十六英寸(40CM,12-15人食用)</li>
+                    <li title="十八英寸(15-18人食用)">十八英寸(45CM,15-18人食用)</li>
+                    <li title="二十英寸(中型聚餐)">二十英寸(50CM,中型聚餐)</li>
                 </ul>
             </div>
             <div class="size can">
@@ -327,12 +578,12 @@
                     <li title="30人份餐具">30人份餐具</li>
                 </ul>
             </div>
-            <div class="xuan">您已选择：<span>十二英寸(适合6-9人食用)5人份餐具</span></div>
+            <div class="xuan">您已选择：<span id="size1">十二英寸(适合6-9人食用)</span><span id="size2">5人份餐具</span></div>
             <div class="shuo">说明：受季节和地域影响，蛋糕装饰原料略有差异，产品及包装请以实物为准</div>
             <div class="bottom">
                 <table>
                     <tr>
-                        <td rowspan="2"><input type="text" value="1"></td>
+                        <td rowspan="2"><input type="text" value="1" id="number"></td>
                         <td class="jia num" title="加"></td>
                     </tr>
                     <tr>
@@ -344,5 +595,181 @@
             </div>
         </div>
     </div>
-
+    <div class="bottom">
+        <div class="bleft">热销榜单</div>
+        <div class="bright">
+            <div class="b-top">
+                <a href="javascript:;" class="current" id="xq">商品详情</a>
+                <a href="javascript:;" id="ping">用户评价 ( <b>16870</b> )</a>
+                <a href="javascript:;" class="current jj">加入到购物车</a>
+            </div>
+            <div class="b-con">
+                <img src="{{detail2.big1}}" alt="">
+                <div class="head">
+                    <span>产品简介 Product Introduction</span>
+                    <img src="images/logo.png" alt="" class="logo">
+                </div>
+                <table>
+                    <tr>
+                        <td>编号：{{detail2.id}}</td>
+                        <td>名称：{{detail.name}}</td>
+                        <td>蛋糕口味：{{detail2.wd}}</td>
+                    </tr>
+                    <tr>
+                        <td>原材料：{{detail2.cl}}</td>
+                        <td>适用场合：{{detail2.cg}}</td>
+                        <td>适合人群：{{detail2.rq}}</td>
+                    </tr>
+                    <tr>
+                        <td>保鲜条件：0-4℃保存12小时</td>
+                        <td>配送范围：本产品全国各地均可送达</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">物语：{{detail2.wy}}</td>
+                    </tr>
+                </table>
+                <div class="head">
+                    <span>产品特点 Product Features</span>
+                    <img src="images/logo.png" alt="" class="logo">
+                </div>
+                <img src="{{detail2.big2}}" alt="">
+                <div class="head">
+                    <span>产品实拍 Product Photograph</span>
+                    <img src="images/logo.png" alt="" class="logo">
+                </div>
+                <img src="{{detail2.big3}}" alt="">
+                <img src="{{detail2.big4}}" alt="">
+                <div class="head">
+                    <span>免费赠送  Free gift</span>
+                    <img src="images/logo.png" alt="" class="logo">
+                </div>
+                <img src="https://www.dangao.com/Tpl/2016skin/Public/images/5mnew_hezi.jpg" alt="">
+                <div class="head">
+                    <span>配送时效及范围 Prescription</span>
+                    <img src="images/logo.png" alt="" class="logo">
+                </div>
+                <img src="https://www.dangao.com/Tpl/2016skin/Public/images/5mnew_dianmian.jpg" alt="">
+                <div class="head">
+                    <span>为什么选择七彩蛋糕 Why us?</span>
+                    <img src="images/logo.png" alt="" class="logo">
+                </div>
+                <img src="https://www.dangao.com/Tpl/2016skin/Public/images/5mnew_baozhang.jpg" alt="">
+            </div>
+            <p class="t">手工制作产品，出品略有差异，请以实物为准</p>
+            <div class="pingjia">
+                <div class="head">
+                    <div>
+                        <span><b>97</b>%</span>
+                        <p>好评度</p>
+                    </div>
+                    <div>
+                        <p>好评(97%)</p>
+                        <p>中评(1%)</p>
+                        <p>差评(2%)</p>
+                    </div>
+                    <div>
+                        <p>买家印象：</p>
+                        <span>配送快(1128)</span>
+                        <span>服务不错(1105)</span>
+                        <span>很新鲜(792)</span>
+                        <span>包装挺好(622)</span>
+                        <span>质量不错(245)</span>
+                        <span>健康卫生(211)</span>
+                        <span>口感不错(199)</span>
+                    </div>
+                    <div>
+                        <button>发表评论</button>
+                    </div>
+                </div>
+                <div class="inner">
+                    <div class="tip">
+                        <div class="left">
+                            <img src="https://www.dangao.com/proimgs/F-711701601.jpg" alt="">
+                            <p>名字</p>
+                        </div>
+                        <div class="right">
+                            <p><img src="images/xing.png" alt=""><span>&nbsp;&nbsp; 5 分 好评</span></p>
+                            <p>很有创意</p>
+                        </div>
+                    </div>
+                    <div class="tip">
+                        <div class="left">
+                            <img src="https://www.dangao.com/proimgs/F-711701601.jpg" alt="">
+                            <p>名字</p>
+                        </div>
+                        <div class="right">
+                            <p><img src="images/xing.png" alt=""><span> 5 分 好评</span></p>
+                            <p>很有创意</p>
+                        </div>
+                    </div>
+                    <div class="tip">
+                        <div class="left">
+                            <img src="https://www.dangao.com/proimgs/F-711701601.jpg" alt="">
+                            <p>名字</p>
+                        </div>
+                        <div class="right">
+                            <p><img src="images/xing.png" alt=""><span> 5 分 好评</span></p>
+                            <p>很有创意</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+
+<script>
+    $(document).ready(function(){
+        $(".jqzoom").imagezoom();
+
+        $("#thumblist li a").mouseover(function(){
+            $(this).parents("li").addClass("tb-selected").siblings().removeClass("tb-selected");
+            $(".jqzoom").attr('src',$(this).find("img").attr("mid"));
+            $(".jqzoom").attr('rel',$(this).find("img").attr("big"));
+        });
+
+        $('#left').click(function(){
+            $('#thumblist').animate({left:0});
+            $(this).css({color:'gray'});
+            $('#right').css({color:'red'});
+        });
+        $('#right').click(function(){
+            $('#thumblist').animate({left:'-390px'});
+            $(this).css({color:'gray'});
+            $('#left').css({color:'red'});
+        });
+
+        $('.zc ul li').click(function(){
+            $(this).addClass('check').siblings().removeClass('check');
+           $('#size1').html($(this).attr('title'));
+        });
+        $('.can ul li').click(function(){
+            $(this).addClass('check').siblings().removeClass('check');
+            $('#size2').html($(this).attr('title'));
+        });
+        var idx = 1;
+        $('.jia').click(function(){
+            idx++;
+           $('#number').val(idx);
+        });
+        $('.jian').click(function(){
+            idx--;
+            if(idx == 0){
+                idx = 1;
+            }
+            $('#number').val(idx);
+        });
+        $('#xq').click(function(){
+            $(this).addClass('current');
+            $('#ping').removeClass('current');
+            $('.b-con').show();
+        });
+        $('#ping').click(function(){
+            $(this).addClass('current');
+            $('#xq').removeClass('current');
+            $('.t').hide();
+            $('.b-con').hide();
+            $('.pingjia').show();
+        });
+    });
+</script>
