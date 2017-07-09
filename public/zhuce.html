@@ -122,23 +122,17 @@
     <div class="biao">
         <div class="zuo">
             <form>
-              <!--  <div class="inp cur">
-                    图片验证码<input type="text" class="username" ng-model="a.name" placeholder="请输入验证码">
+                <br>
+                <div class="inp cass">
+                    手　机　号<input type="text" class="phone" ng-model="a.phone"  placeholder="手机号/邮箱">
                 </div>
                 <br>
                 <div class="inp cur">
-                    手　机　号<input type="text" class="username" ng-model="a.name" placeholder="请输入验证码">
-                </div>-->
-                <br>
-                <div class="inp cur">
-                    用 户 姓 名<input type="text" class="username" ng-model="a.name" placeholder="手机号/邮箱">
+                    用 户 姓 名<input type="text" class="username" ng-model="a.name" placeholder="用户名">
                 </div><br>
                 <div class="inp">
-                    登 录 密 码<input type="password" ng-model="a.password" placeholder="用户名">
+                    登 录 密 码<input type="password" ng-model="a.password" placeholder="密码">
                 </div><br>
-                <!--<div class="inp">
-                   <input type="text" placeholder="密码">
-                </div>-->
                 <div>我已阅读并同意<a style="color: #89c8ff;" href="zhuce.html"> 《七彩用户注册协议》</a></div>
                 <span type="button"  ng-click="zhuce(a)">注 册</span><br>
 
@@ -160,17 +154,58 @@
     //2.创建控制器
     app.controller('studentCtry1',function($scope,$http) {
         //简写
+        $scope.a = {};
         $scope.zhuce= function (a) {
-            $http.post('/s',a).then(function (res) {
+            console.log(a.phone);
+            $http.get('/s',a).then(
+                function (res) {
+                    var dataa = res.data.date;
+                    console.log(dataa);
+                    var thee = null;
+                    for(var i=1;i< dataa.length ;i++){
+                        console.log(dataa[i].phone);
+                        console.log(a.phone);
+                        if(dataa[i].phone == a.phone){
+                            thee = 11;
+                        }
+                        if(a.phone == null){
+                            thee = 12;
+                        }
+                        if(a.password == null){
+                            thee = 13;
+                        }else{
+                            thee = 14;
+                        }
+                    }
+                    console.log(thee);
+                    if(thee == 11){
+                        alert("账号已存在");
+                    }
+                    if(thee == 12){
+                        alert("请输入密码");
+                    } if(thee == 13){
+                        alert("请输入账号");
+                    }
+                    if(thee == 14){
+                        zhunyi(a)
+                    }
+
+
+                }
+            )
+            function zhunyi(a) {
+                $http.post('/s',a).then(function (res) {
                     var result =res.data;
+                    console.log(res);
                     if (result.success) {
                         //新增成功
                         //console.log('成功');
-                        alert('成功')
-                    }else{
-                        //console.log('失败');
+                        alert('成功');
+                        location.href="denglu.html"
                     }
                 })
+            }
+
         }
     });
 </script>

@@ -201,6 +201,9 @@
             border-left: 1px solid #e0e0e0;
             margin-top: 20px;
         }
+        span .cur{
+            focus:state==1
+        }
         .focus{background-color:red;color: white;}
     </style>
 </head>
@@ -225,16 +228,16 @@
         <div class="zuo">
             <form ng-app="myApp" ng-controller="studentCtry1">
                 <div class="top">
-                   <span ng-click="state=1;" ng-class="{focus:state==1}">手机号+密码登录</span>
+                   <span class="cur"   ng-click="state=1" ng-class="{focus:state==1}">手机号+密码登录</span>
                    <span ng-click="state=2;" ng-class="{focus:state==2}">手机号+验证码登录</span>
                 </div>
                 <br>
-                <div class="inp cur">
-                    <input type="text" class="username" ng-model="a.name" placeholder="手机号/邮箱">
-                </div><br>
-                <div class="inp">
-                    <input type="password" ng-model="a.password" placeholder="密码">
-                </div><br>
+                    <div class="inp cur">
+                        <input type="text" class="phone" ng-model="a.phone" placeholder="手机号/邮箱">
+                    </div><br>
+                    <div class="inp">
+                        <input type="password" ng-model="a.password" placeholder="密码">
+                    </div><br>
                 <div class="inp">
                     <input type="text" placeholder="请输入图片验证码">
                 </div>
@@ -260,10 +263,15 @@
     //app.controller(name,constructor)
     app.controller('studentCtry1',function($scope,$http) {
         //简写
+        $scope.state=1;
         $scope.a = {};
+        $scope.visible = false;
+        $scope.toggle = function () {
+            $scope.visible = !$scope.visible;
+        }
         $scope.denglu = function (a) {
             console.log(a.name);
-            if(a.name ==null){
+            if(a.phone ==null){
                 alert("账号不能为空");
             }else if(a.password ==null){
                 alert("密码不能为空");
@@ -271,22 +279,38 @@
             else{
                 xuanxin(a);
             }
-
-
         };
         function xuanxin(a) {
             $http.get('/s',a).then(
                 function (res) {
                     var dataa = res.data.date;
                     console.log(a.name);
+                    console.log(dataa);
+                    var tree = null;
                     for(var i=1;i< dataa.length ;i++){
-                        if((dataa[i].name == a.name)&&(dataa[i].password == a.password)){
-                                console.log(1);
-                                location.href="index.html";
-                        }else{
-                            alert("密码错误");
-                            return;
+                        if(!dataa[i].phone == a.phone){
+                              tree= 11;
                         }
+                        if(!dataa[i].password == a.password){
+                            tree= 12;
+                        }
+                        if((dataa[i].phone == a.phone)&&(dataa[i].password == a.password)){
+                            tree= 14;
+                        }else{
+                            tree= 0;
+                        }
+                    }
+                    if(tree ==11){
+                        alert("账号错误");
+                    }
+                    if(tree ==12){
+                        alert("密码错误");
+                    }
+                    if(tree==0){
+                        alert("账号和密码都错误");
+                    }
+                    if(tree==14){
+                        location.href="index.html";
                     }
                 }
             )
