@@ -115,6 +115,7 @@
         -ms-transform: translateY(-50%);
         -o-transform: translateY(-50%);
         transform: translateY(-50%);
+        z-index:999;
     }
     .middle .detail div.jiage p:first-child{
         top:35%;
@@ -532,13 +533,11 @@
             <div class="sm">
                 <span id="left"><</span>
                 <ul class="tb-thumb" id="thumblist">
-                    <li class="tb-selected" ng-show=""><div class="tb-pic tb-s40"><a href="javascripts:;"><img src="{{detail2.simg1}}" mid="{{detail2.mimg1}}" big="{{detail2.bimg1}}"></a></div></li>
-                    <li><div class="tb-pic tb-s40"><a href="javascripts:;"><img  src="{{detail2.simg2}}" mid="{{detail2.mimg2}}" big="{{detail2.bimg2}}"></a></div></li>
-                    <li><div class="tb-pic tb-s40"><a href="javascripts:;"><img src="{{detail2.simg3}}" mid="{{detail2.mimg3}}" big="{{detail2.bimg3}}"></a></div></li>
-                    <li><div class="tb-pic tb-s40"><a href="javascripts:;"><img src="{{detail2.simg4}}" mid="{{detail2.mimg4}}" big="{{detail2.bimg4}}"></a></div></li>
-                    <li><div class="tb-pic tb-s40"><a href="javascripts:;"><img src="{{detail2.simg5}}" mid="{{detail2.mimg5}}" big="{{detail2.bimg5}}"></a></div></li>
-                    <li><div class="tb-pic tb-s40"><a href="javascripts:;"><img  src="{{detail2.simg2}}" mid="{{detail2.mimg2}}" big="{{detail2.bimg2}}"></a></div></li>
-                    <li><div class="tb-pic tb-s40"><a href="javascripts:;"><img src="{{detail2.simg3}}" mid="{{detail2.mimg3}}" big="{{detail2.bimg3}}"></a></div></li>
+                    <li class="tb-selected" ng-show="detail2.simg1"><div class="tb-pic tb-s40"><a href="javascripts:;"><img src="{{detail2.simg1}}" mid="{{detail2.mimg1}}" big="{{detail2.bimg1}}"></a></div></li>
+                    <li><div class="tb-pic tb-s40" ng-show="detail2.simg2"><a href="javascripts:;"><img  src="{{detail2.simg2}}" mid="{{detail2.mimg2}}" big="{{detail2.bimg2}}"></a></div></li>
+                    <li><div class="tb-pic tb-s40" ng-show="detail2.simg3"><a href="javascripts:;"><img src="{{detail2.simg3}}" mid="{{detail2.mimg3}}" big="{{detail2.bimg3}}"></a></div></li>
+                    <li><div class="tb-pic tb-s40" ng-show="detail2.simg4"><a href="javascripts:;"><img src="{{detail2.simg4}}" mid="{{detail2.mimg4}}" big="{{detail2.bimg4}}"></a></div></li>
+                    <li><div class="tb-pic tb-s40" ng-show="detail2.simg5"><a href="javascripts:;"><img src="{{detail2.simg5}}" mid="{{detail2.mimg5}}" big="{{detail2.bimg5}}"></a></div></li>
                 </ul>
                 <span class="right" id="right">></span>
             </div>
@@ -663,6 +662,7 @@
             <div class="b-con b-con-ts" ng-hide="show">
                 <img src="https://www.dangao.com/Tpl/2016skin/Public/images/cake_chicun.jpg" alt="">
                 <img src="{{detail2.big1}}" alt="">
+                <img src="{{detail2.big2}}" alt="" ng-show="detail2.big2!=null">
             </div>
             <div class="b-con">
                 <img src="https://www.dangao.com/Tpl/2016skin/Public/images/5mnew_baozhang.jpg" alt="">
