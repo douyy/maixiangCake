@@ -12,7 +12,7 @@
 <header>
     <div class="inner_c">
         <div class="header_left">
-            <p>七彩蛋糕-蛋糕配送专家</p>
+            <p>麦香蛋糕-蛋糕配送专家</p>
             <p>
                 <a href="denglu.html">登录</a>
                 <span>|</span>
@@ -51,7 +51,7 @@
 <!--section-->
 <section class="sousuo">
     <div class="sec_left">
-        <img src="https://www.dangao.com/Tpl/2016skin/Public/images/logo.png" alt="">
+        <img src="http://www.dangao06.cn/themes/newpage/images/logo.png" alt="">
     </div>
     <div class="sec_center">
         <form>
@@ -193,8 +193,8 @@
     <div class="footer_bottom">
         <div class="center">
             <img src="./images/logo-footer.png" alt="">
-            <p class="desc"><a href="">联系我们|关于我们|招商加盟|问题反馈|鲁ICP备11002183号|站点地图</a></p>
-            <p class="desc">Copyright©1997-2016 dangao.com All rights reserved. 青州七彩时尚电子商务有限公司-七彩蛋糕-版权所有,禁止非法复制</p>
+            <p class="desc"><a href="">麦香官网 | 联系我们 | 关于我们 | 用户中心 | 在线支付 | 购物流程 | 水果蛋糕</a></p>
+            <p class="desc">Copyright©2016-2017 dangao05.com All rights reserved. 襄阳鲜佳食品有限公司 - 蛋糕订购-版权所有,禁止非法复制</p>
             <ul>
                 <li><img src="./images/f-logo-1.png" alt=""></li>
                 <li><img src="./images/f-logo-2.png" alt=""></li>
@@ -205,5 +205,68 @@
         </div>
     </div>
 </footer>
+
+<script src="/js/jquery.min.js"></script>
+<script src="/js/underscore-min.js"></script>
+<script>
+    $('.nr').mouseover(function(){
+        $('.list').show();
+    });
+    $('.nr').mouseleave(function(){
+        $('.list').hide();
+    });
+    $('.wz span').mouseover(function(){
+        $(this).addClass('cur').siblings().removeClass('cur');
+    });
+    //购物车
+    $('.gwc').mouseover(function(){
+        $(this).css({
+            'box-shadow':'0 0 5px rgba(0,0,0,0.2)',
+            'border-bottom':'none'
+        });
+        $('.tishi').show();
+    });
+    $('.gwc').mouseleave(function(){
+        $(this).css({
+            'box-shadow':'none',
+            'border-bottom':'1px solid #ddd'
+        });
+        $('.tishi').hide();
+    });
+
+    //    商品列表
+    $('.productList').show();
+    $('.productList ul li').mouseover(function () {
+        $('table').empty();
+        $('.rightImg').empty();
+        $('.yongtu').show();
+        var self = $(this).index();
+        $.get('/users', function (data) {
+            var u = data[self].url;
+            $('<img src="' + u + '">').appendTo($('.rightImg'));
+            for (var j = 0; j < data[self].content.length; j++) {
+                var s = data[self].content[j];
+                $('<tr style="height:40px;font-size:14px;line-height:35px;"></tr>').append('<td style="width:80px;padding-left:20px;"><a href="#" style="color:#666;">' + s.type + '&nbsp;&nbsp;&nbsp;>' + '</a></td>')
+                        .append('<td style="border-bottom:1px solid #e0e0e0;"><a href="#" style="color:#666;">' + s.neirong + '</a></td>')
+                        .appendTo($('table'));
+            }
+            $('table tr td a').mouseover(function () {
+                $(this).css('color', '#c00');
+            });
+            $('table tr td a').mouseleave(function () {
+                $(this).css('color', '#666');
+            });
+        });
+    });
+    $('.productList ul li').mouseleave(function(){
+        $('.yongtu').hide();
+    });
+    $('.yongtu').mouseover(function(){
+        $(this).show();
+    });
+    $('.yongtu').mouseleave(function () {
+        $(this).hide();
+    });
+</script>
 </body>
 </html>
