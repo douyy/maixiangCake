@@ -227,6 +227,7 @@ nav .inner_c .nav_left .productList{
     z-index:990;
     background-color: #E4393C;
     height:400px;
+    display: none;
 }
 nav .inner_c .nav_left .productList li{
     height:36px;

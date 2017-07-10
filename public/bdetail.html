@@ -506,6 +506,12 @@
     .content .bottom .bright .pingjia .inner .tip .right p:last-child{
         margin-top:10px;
     }
+    .b-con-ts{
+        text-align: center;
+    }
+    .b-con-ts img{
+        width:740px;
+    }
 </style>
 
 <div class="content">
@@ -526,7 +532,7 @@
             <div class="sm">
                 <span id="left"><</span>
                 <ul class="tb-thumb" id="thumblist">
-                    <li class="tb-selected"><div class="tb-pic tb-s40"><a href="javascripts:;"><img src="{{detail2.simg1}}" mid="{{detail2.mimg1}}" big="{{detail2.bimg1}}"></a></div></li>
+                    <li class="tb-selected" ng-show=""><div class="tb-pic tb-s40"><a href="javascripts:;"><img src="{{detail2.simg1}}" mid="{{detail2.mimg1}}" big="{{detail2.bimg1}}"></a></div></li>
                     <li><div class="tb-pic tb-s40"><a href="javascripts:;"><img  src="{{detail2.simg2}}" mid="{{detail2.mimg2}}" big="{{detail2.bimg2}}"></a></div></li>
                     <li><div class="tb-pic tb-s40"><a href="javascripts:;"><img src="{{detail2.simg3}}" mid="{{detail2.mimg3}}" big="{{detail2.bimg3}}"></a></div></li>
                     <li><div class="tb-pic tb-s40"><a href="javascripts:;"><img src="{{detail2.simg4}}" mid="{{detail2.mimg4}}" big="{{detail2.bimg4}}"></a></div></li>
@@ -603,7 +609,7 @@
                 <a href="javascript:;" id="ping">用户评价 ( <b>16870</b> )</a>
                 <a href="javascript:;" class="current jj">加入到购物车</a>
             </div>
-            <div class="b-con">
+            <div class="b-con" ng-show="show">
                 <img src="{{detail2.big1}}" alt="">
                 <div class="head">
                     <span>产品简介 Product Introduction</span>
@@ -653,6 +659,12 @@
                     <span>为什么选择七彩蛋糕 Why us?</span>
                     <img src="images/logo.png" alt="" class="logo">
                 </div>
+            </div>
+            <div class="b-con b-con-ts" ng-hide="show">
+                <img src="https://www.dangao.com/Tpl/2016skin/Public/images/cake_chicun.jpg" alt="">
+                <img src="{{detail2.big1}}" alt="">
+            </div>
+            <div class="b-con">
                 <img src="https://www.dangao.com/Tpl/2016skin/Public/images/5mnew_baozhang.jpg" alt="">
             </div>
             <p class="t">手工制作产品，出品略有差异，请以实物为准</p>
