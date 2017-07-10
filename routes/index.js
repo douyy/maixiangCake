@@ -23,4 +23,29 @@ router.get('/a', function(req, res, next) {
         });
     });
 });
+router.get('/bzzx',function (req,res) {
+    res.render('bangzhuzhongxin',{
+        title:'网上怎么定蛋糕'
+    })
+})
+router.get('/bjhk',function (req,res) {
+    res.render('bujiaohuokuan',{
+        title:'麦香蛋糕--专业的蛋糕速送商'
+    })
+})
+router.get('/ddcx',function (req,res) {
+    res.render('dingdanchaxun',{
+        title:'麦香蛋糕--专业的蛋糕速送商'
+    })
+})
+router.get('/fkfs',function (req,res) {
+    res.render('fukuanfangshi',{
+        title:'麦香蛋糕--专业的蛋糕速送商'
+    })
+})
+router.get('/pscx',function (req,res) {
+    res.render('peisongchaxun',{
+        title:'麦香蛋糕--专业的蛋糕速送商'
+    })
+})
 module.exports = router;
