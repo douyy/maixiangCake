@@ -220,31 +220,6 @@
 <script src="/js/jquery.min.js"></script>
 <script src="/js/underscore-min.js"></script>
 <script>
-    $('.nr').mouseover(function(){
-        $('.list').show();
-    });
-    $('.nr').mouseleave(function(){
-        $('.list').hide();
-    });
-    $('.wz span').mouseover(function(){
-        $(this).addClass('cur').siblings().removeClass('cur');
-    });
-    //购物车
-    $('.gwc').mouseover(function(){
-        $(this).css({
-            'box-shadow':'0 0 5px rgba(0,0,0,0.2)',
-            'border-bottom':'none'
-        });
-        $('.tishi').show();
-    });
-    $('.gwc').mouseleave(function(){
-        $(this).css({
-            'box-shadow':'none',
-            'border-bottom':'1px solid #ddd'
-        });
-        $('.tishi').hide();
-    });
-
     //轮播
     var idx = 0;
     var timer = setInterval(autoPlay,2000);
@@ -278,32 +253,7 @@
         changeCircles();
     });
 
-    //    商品列表
-    $('.productList ul li').mouseover(function () {
-        $('table').empty();
-        $('.rightImg').empty();
-        $('.yongtu').show();
-        var self = $(this).index();
-        $.get('/users', function (data) {
-            var u = data[self].url;
-            $('<img src="' + u + '">').appendTo($('.rightImg'));
-            for (var j = 0; j < data[self].content.length; j++) {
-                var s = data[self].content[j];
-                $('<tr style="height:40px;font-size:14px;line-height:35px;"></tr>').append('<td style="width:80px;padding-left:20px;"><a href="#" style="color:#666;">' + s.type + '&nbsp;&nbsp;&nbsp;>' + '</a></td>')
-                        .append('<td style="border-bottom:1px solid #e0e0e0;"><a href="#" style="color:#666;">' + s.neirong + '</a></td>')
-                        .appendTo($('table'));
-            }
-            $('table tr td a').mouseover(function () {
-                $(this).css('color', '#c00');
-            });
-            $('table tr td a').mouseleave(function () {
-                $(this).css('color', '#666');
-            });
-        });
-    });
-    $('.yongtu').mouseleave(function () {
-        $(this).hide();
-    });
+
 
     //小轮播
     $('.stage ul li:first').clone().appendTo('.stage ul');
