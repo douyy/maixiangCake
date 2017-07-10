@@ -89,6 +89,7 @@
         border:none;
         margin-left: 60px;
         margin-top: 20px;
+        outline: none;
     }
     section.sec .section .right .top2 .input{
         text-align: right;
@@ -111,9 +112,9 @@
     }
 
 </style>
-<section class="sec">
+<section class="sec" ng-app="myApp" ng-controller="yonghuCtry1">
     <div class="section">
-        <div class="top"><a href="/">首页</a>＞帮助中心＞订单查询</div>
+        <div class="top"><a href="/">首页</a>＞<a href="/bzzx">帮助中心</a>＞<a href="/ddcx">订单查询</a></div>
         <div class="center">
             <div class="left">
                 <h4>购物指南</h4>
@@ -156,11 +157,11 @@
                 <div class="top top2">
                     <h4>一、请输入订单号、订货人手机查询！</h4>
                     <div>
-                        <span class="input">请填写订单号：</span> <input type="text">
-                        <button>查询</button>
+                        <span class="input" ng-model="a.ddh">请填写订单号：</span> <input type="text">
+                        <button ng-click="chaxun1(a)">查询</button>
                     </div>
                     <div>
-                        <span class="input">请输入订货人手机：</span> <input type="text">
+                        <span class="input" ng-model="a.phone">请输入订货人手机：</span> <input type="text">
                     </div>
 
                     <p>说明：本查询为快捷查询系统，不论是否注册用户均可以查询，
@@ -168,11 +169,11 @@
                         24小时服务热线：400-658-1177，谢谢！</p><br>
                     <h4>二、如果您忘记订单号码，请用以下查询！</h4>
                     <div>
-                        <span class="input">输入订货人电话：</span> <input type="text">
-                        <button>查询</button>
+                        <span class="input" ng-model="a.dhphone">输入订货人电话：</span> <input type="text">
+                        <button ng-click="chaxun2(a)">查询</button>
                     </div>
                     <div>
-                        <span class="input">输入收货人电话：</span> <input type="text">
+                        <span class="input"  ng-model="a.shphone">输入收货人电话：</span> <input type="text">
                     </div>
 
                     <p>说明：本查询为快捷查询系统，不论是否注册用户均可以查询，双方电话都要输入，
@@ -186,3 +187,31 @@
     </div>
 
 </section>
+<script src="/angular.min.js"></script>
+<script>
+    var app = angular.module('myApp',[])
+    //2.创建控制器
+    //app.controller(name,constructor)
+    app.controller('yonghuCtry1',function($scope,$http) {
+        $scope.a = {};
+        $scope.chaxun1 = function (a) {
+            if(a.pddh == null ){
+                alert('订单号不能为空');
+                return;
+            }
+            if(a.phone == null ){
+                alert('手机号不能为空')
+            }
+        }
+        $scope.chaxun2 = function (a) {
+
+            if(a.dhphone == null ){
+                alert('订货人手机号不能为空');
+                return;
+            }
+            if(a.shphone == null ){
+                alert('取货人手机号不能为空')
+            }
+        }
+    });
+</script>

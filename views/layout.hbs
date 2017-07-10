@@ -6,7 +6,31 @@
     <link rel='stylesheet' href='/stylesheets/cssreset-min.css' />
     <link rel='stylesheet' href='/stylesheets/style.css' />
     <link rel='stylesheet' href='/stylesheets/index.css' />
-
+    <style>
+        aside{
+            width: 80px;
+            height: 310px;
+            position: fixed;
+            top: 220px;
+            right: 60px;
+            background:url("http://www.dangao06.cn/themes/yesmywine/images/rightok.jpg")no-repeat;
+            padding-top: 20px;
+        }
+        aside .ul li{
+            width: 80px;
+            height: 70px;
+            margin-top: 6px;
+            position: relative;
+        }
+        aside .zhiding{
+            position: absolute;
+            bottom: -50px;
+            left: 15px;
+            width: 55px;
+            height: 55px;
+            display: none;
+        }
+    </style>
 </head>
 <body>
 <header>
@@ -29,20 +53,20 @@
                         <li><a href="">我的余额</a></li>
                         <li><a href="">我的收藏</a></li>
                         <li><a href="">用户中心</a></li>
-                        <li><a href="">修改资料</a></li>
+                        <li><a href="xiugaiziliao.html">修改资料</a></li>
                         <span></span>
                     </ul>
                 </li>
                 <li class="line">|</li>
-                <li class="neirong"><a href="./fukuanfangshi.html" class="red">补交货款</a></li>
+                <li class="neirong"><a href="/bjhk" class="red">补交货款</a></li>
                 <li class="line">|</li>
-                <li class="neirong"><a href="./fukuanfangshi.html" class="red">付款方式</a></li>
+                <li class="neirong"><a href="/fkfs" class="red">付款方式</a></li>
                 <li class="line">|</li>
-                <li class="neirong"><a href="./peisongchaxun.html" class="hov">配送查询</a></li>
+                <li class="neirong"><a href="/pscx" class="hov">配送查询</a></li>
                 <li class="line">|</li>
-                <li class="neirong"><a href="./dingdanchaxun.html" class="hov">订单查询</a></li>
+                <li class="neirong"><a href="/ddcx" class="hov">订单查询</a></li>
                 <li class="line">|</li>
-                <li class="neirong"><a href="./bangzhuzhongxin.html" class="hov">帮助中心</a></li>
+                <li class="neirong"><a href="/bzzx" class="hov">帮助中心</a></li>
             </ul>
         </div>
     </div>
@@ -79,7 +103,7 @@
         <div class="nav_left">
             <div class="fenlei">全部商品分类</div>
             <!--商品列表-->
-            <div class="productList">
+          <!--  <div class="productList">
                 <ul>
                     <li>
                         <a href="">蛋糕、生日蛋糕、卡通蛋糕</a>
@@ -113,7 +137,7 @@
                         <span>></span>
                     </li>
                 </ul>
-            </div>
+            </div>-->
         </div>
         <div class="nav_right">
             <ul>
@@ -205,6 +229,20 @@
         </div>
     </div>
 </footer>
+<aside>
+    <ul class="ul">
+        <div></div>
+        <a href="http://wpa.qq.com/msgrd?v=3&uin=3253301296&site=qq&menu=yes"><li></li></a>
+        <a href="http://kefu.qycn.com/vclient/chat/?websiteid=118185"><li></li></a>
+        <a href="#"><li></li></a>
+        <a href="http://wpa.qq.com/msgrd?v=3&uin=3253301296&site=qq&menu=yes"><li></li></a>
+    </ul>
+    <div class="zhiding">
+        <a onclick="pageScroll()"><img src="http://www.dangao06.cn/themes/yesmywine/images/rightgotop.jpg" alt=""></a>
+    </div>
+</aside>
+<a id="" href="http://www.ibangkf.com">在线客服系统</a>
+<script type="text/javascript" src="http://c.ibangkf.com/i/c-caoyichao.js"></script>
 
 <script src="/js/jquery.min.js"></script>
 <script src="/js/underscore-min.js"></script>
@@ -267,6 +305,34 @@
     $('.yongtu').mouseleave(function () {
         $(this).hide();
     });
+</script>
+<script>
+    $(window).scroll(function () {
+        var hd = $(window).scrollTop() ;
+        //console.log(hd);
+        if (hd>200&&hd<500) {
+            $('aside .zhiding').fadeOut();
+        }
+        if (hd>500) {
+            $('aside .zhiding').fadeIn();
+        }
+    })
+    function pageScroll(){
+        //把内容滚动指定的像素数（第一个参数是向右滚动的像素数，第二个参数是向下滚动的像素数）
+        window.scrollBy(0,-100);
+        //延时递归调用，模拟滚动向上效果
+        scrolldelay = setTimeout('pageScroll()',50);
+        //获取scrollTop值，声明了DTD的标准网页取document.documentElement.scrollTop，否则取document.body.scrollTop；因为二者只有一个会生效，另一个就恒为0，所以取和值可以得到网页的真正的scrollTop值
+        var sTop=document.documentElement.scrollTop+document.body.scrollTop;
+        /*要获取当前页面的滚动条纵坐标位置，用：
+        document.documentElement.scrollTop;
+        而不是：
+        document.body.scrollTop;
+        documentElement 对应的是 html 标签，而 body 对应的是 body 标签。*/
+        console.log(document.documentElement.scrollTop);
+        //判断当页面到达顶部，取消延时代码（否则页面滚动到顶部会无法再向下正常浏览页面）
+        if(sTop==0) clearTimeout(scrolldelay);
+    }
 </script>
 </body>
 </html>
