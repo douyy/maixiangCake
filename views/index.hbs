@@ -68,8 +68,8 @@
         </div>
     </div>
     <div class="sec_center">
-        <a href=""><img src="https://www.dangao.com/Tpl/2016skin/Public/imgbanner/300-210-1.jpg" alt=""></a>
-        <a href=""><img src="https://www.dangao.com/Tpl/2016skin/Public/imgbanner/300-210-2.jpg" alt=""></a>
+        <a href="route.html#!/detail/65"><img src="https://www.dangao.com/Tpl/2016skin/Public/imgbanner/300-210-1.jpg" alt=""></a>
+        <a href="route.html#!/detail/15"><img src="https://www.dangao.com/Tpl/2016skin/Public/imgbanner/300-210-2.jpg" alt=""></a>
     </div>
     <div class="sec_right">
         <p>客服中心 CALL CENTER</p>
@@ -286,5 +286,14 @@
            $('.shangpin ul').append($(DOMStr));
         });
     });
-    $('.productList').show();
+
+    $(function(){
+        $('.productList').show();
+        $('.yongtu').mouseleave(function(){
+            $('.productList').show();
+        });
+        $('.productList').mouseleave(function(){
+            $('.productList').show();
+        });
+    })
 </script>
