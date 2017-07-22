@@ -1,6 +1,3 @@
-/**
- * Created by a on 2017/7/5.
- */
 var express = require('express');
 //工厂函数
 var router = express.Router();
