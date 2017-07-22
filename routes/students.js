@@ -5,7 +5,7 @@ var express = require('express');
 //工厂函数
 var router = express.Router();
 //导入数据库的链接
-var conn = require('../mysql/db')
+var conn = require('../mysql/cake')
 //导入
 router.get('/',(req,res)=>{
     let sql =` SELECT * FROM user`;
