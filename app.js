@@ -36,7 +36,7 @@ app.use('/', index);
 app.use('/users', users);
 app.use('/birthday', birthday);
 app.use('/birthdayApp', birthdayApp);
-app.use('/s',maycake);
+app.use('/s',mycake);
 app.use('/cake', cake);
 
 // catch 404 and forward to error handler
