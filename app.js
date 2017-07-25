@@ -9,7 +9,7 @@ var index = require('./routes/index');
 var users = require('./routes/users');
 var birthday = require('./routes/birthday');
 var birthdayApp = require('./routes/birthday_app');
-var students = require('./routes/students');
+var mycake = require('./routes/mycake');
 var cake = require('./routes/cake');
 var app = express();
 
@@ -36,7 +36,7 @@ app.use('/', index);
 app.use('/users', users);
 app.use('/birthday', birthday);
 app.use('/birthdayApp', birthdayApp);
-app.use('/s', students);
+app.use('/s',maycake);
 app.use('/cake', cake);
 
 // catch 404 and forward to error handler
