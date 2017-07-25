@@ -1190,7 +1190,7 @@ router.get('/',function(req,res){
         });
     });
 })
-router.get('/:id',function(req,res){
+router.get('/s/:id',function(req,res){
     conn.query('select * from cake where id = ?',req.params.id,function(err,user){
         if (err) {
             return res.send({
@@ -1216,6 +1216,42 @@ router.post('/:id',function(req,res){
         return res.send({
             success:true,
             data:user
+        });
+    });
+})
+//评论
+router.get('/pl',function(req,res){
+    conn.query('select * from talk',function(err,user){
+        if (err) {
+            return res.send({
+                success:false,
+                data:err.message
+            });
+        }
+        return res.send({
+            success:true,
+            data:user
+        });
+    });
+})
+//回复评论
+router.put('/pl',function(req,res){
+    console.log(req.body);
+    conn.query('update talk set reply = ? where phone = ? ',[req.body.reply,req.body.phone],function(err,user){
+        if (err) {
+            return res.send({
+                success:false,
+                data:err.message
+            });
+        }
+        if(user.affectedRows > 0){
+            return res.send({
+                success:true
+            });
+        }
+        return res.send({
+            success:false,
+            data:'插入失败'
         });
     });
 })
