@@ -678,7 +678,7 @@ conn.query(`select * from cake`,(err,result)=>{
 });
 
 /* GET home page. */
-var sql = `SELECT c.url,c.name,c.introduce,c.price,c.ishot,c.iste,c.isnew,cl.classify,cl.letter
+var sql = `SELECT *
               FROM classify_cake cc
               LEFT JOIN cake c ON  cc.cakeIid=c.cakeid
               LEFT JOIN classify cl ON cc.classifyId=cl.classifyId`;
@@ -711,5 +711,91 @@ router.get('/type',(req,res)=>{
     });
   });
 });
-
+//购物车增加
+router.post('/',(req,res)=>{
+    console.log(req.body.cakeid,req.body.phone);
+    var dd = 1;
+    conn.query('select num from cart1 where cakeid = ? and phone = ?',[req.body.cakeid,req.body.phone],(err,result)=>{
+        if(result.length > 0){
+            var onum = new String(result[0].num);
+            var newnum = parseInt(onum[0]) + 1;
+            conn.query(`update cart1 set num = ? where cakeid = ? and phone = ?`,
+                [newnum,req.body.cakeid,req.body.phone],(err)=>{
+                    if(err){
+                        return res.send({
+                            success:false,
+                            data:err.message
+                        });
+                    }
+                    return res.send({
+                        success:true,
+                    });
+                });
+        }else{
+          conn.query("insert into cart1(cakeid,phone,num) values(?,?,?)",
+              [req.body.cakeid,req.body.phone,dd],(err)=>{
+              if(err){
+                  return res.send({
+                      success:false,
+                      data:err.message
+                  });
+              }
+              return res.send({
+                  success:true,
+              });
+          });
+        }
+    })
+});
+//购物车查询
+router.get('/cart?',(req,res)=>{
+  // console.log(req.query.userphone);
+    conn.query(`SELECT c.*,ct.num FROM cake c 
+          LEFT JOIN cart1 ct ON c.cakeid=ct.cakeid 
+          WHERE phone=?`,
+        [req.query.userphone],(err,result)=>{
+        if(err){
+            return res.send({
+                success:false,
+                data:err.message
+            });
+        }
+        return res.send({
+            success:true,
+            data:result
+        });
+    });
+});
+//购物车删除
+router.delete('/cart?',(req,res)=>{
+    // console.log(req.query.cakeid);
+    conn.query(`delete from cart1 where cakeid = ? and phone = ?`,
+        [req.query.cakeid,req.query.phone],(err)=>{
+            if(err){
+              return res.send({
+                  success:false,
+                  data:err.message
+              })
+            }
+            return res.send({
+                success:true,
+            })
+        })
+})
+//数量增加
+router.put('/num',(req,res)=>{
+    console.log(req.body);
+    conn.query(`update cart1 set num = ? where cakeid = ? and phone = ?`,
+              [req.body.num,req.body.cakeid,req.body.phone],(err)=>{
+      if(err){
+        return res.send({
+            success:false,
+            data:err.message,
+        })
+      }
+      return res.send({
+          success:true,
+      })
+    })
+})
 module.exports = router;
