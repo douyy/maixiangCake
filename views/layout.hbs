@@ -6,31 +6,6 @@
     <link rel='stylesheet' href='/stylesheets/cssreset-min.css' />
     <link rel='stylesheet' href='/stylesheets/style.css' />
     <link rel='stylesheet' href='/stylesheets/index.css' />
-    <style>
-        aside{
-            width: 80px;
-            height: 310px;
-            position: fixed;
-            top: 220px;
-            right: 60px;
-            background:url("http://www.dangao06.cn/themes/yesmywine/images/rightok.jpg")no-repeat;
-            padding-top: 20px;
-        }
-        aside .ul li{
-            width: 80px;
-            height: 70px;
-            margin-top: 6px;
-            position: relative;
-        }
-        aside .zhiding{
-            position: absolute;
-            bottom: -50px;
-            left: 15px;
-            width: 55px;
-            height: 55px;
-            display: none;
-        }
-    </style>
 </head>
 <body>
 <header>
@@ -79,7 +54,7 @@
     </div>
     <div class="sec_center">
         <form>
-            <input type="text"><span class="ss">搜索</span>
+            <div><input type="text"></div>
             <p class="wz">
                 <span><a href="">生日蛋糕</a></span>
                 <span><a href="#">巧克力蛋糕</a></span>
@@ -247,6 +222,13 @@
 <script src="/js/jquery.min.js"></script>
 <script src="/js/underscore-min.js"></script>
 <script>
+    $('input').blur(function(){
+        $.get('/b'+ $('input').val(),function(data){
+            console.log(data);
+        });
+    });
+
+
     $('.nr').mouseover(function(){
         $('.list').show();
     });
@@ -285,12 +267,12 @@
                 var s = data[self].content[j];
                 $('<tr style="height:40px;font-size:14px;line-height:35px;"></tr>').append('<td style="width:80px;padding-left:20px;"><a href="#" style="color:#666;">' + s.type + '&nbsp;&nbsp;&nbsp;>' + '</a></td>')
                         .append('<td style="border-bottom:1px solid #e0e0e0;"><a href="#" style="color:#666;">' + s.neirong + '</a></td>')
-                        .appendTo($('table'));
+                        .appendTo($('table.list'));
             }
-            $('table tr td a').mouseover(function () {
+            $('table.list tr td a').mouseover(function () {
                 $(this).css('color', '#c00');
             });
-            $('table tr td a').mouseleave(function () {
+            $('table.list tr td a').mouseleave(function () {
                 $(this).css('color', '#666');
             });
         });

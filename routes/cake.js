@@ -22,7 +22,8 @@ var cake = [
       img4:'https://www.dangao.com/proimgs/C-711673mdesC2.jpg',
       img5:'https://www.dangao.com/proimgs/C-711673mdesC3.jpg',
       img6:'https://www.dangao.com/proimgs/C-711673mdesC4.jpg',
-      ishot:'true'
+      ishot:'true',
+      number:1
     },
     {
       cakeid:2,
@@ -44,6 +45,7 @@ var cake = [
       img4:'https://www.dangao.com/proimgs/C-701716mdesC2.jpg',
       img5:'https://www.dangao.com/proimgs/C-701716mdesC3.jpg',
       img6:'https://www.dangao.com/proimgs/C-701716mdesC4.jpg',
+      number:1
     },
     {
       cakeid:3,
@@ -65,6 +67,7 @@ var cake = [
       img4:'https://www.dangao.com/proimgs/C-708039mdesC2.jpg',
       img5:'https://www.dangao.com/proimgs/C-708039mdesC3.jpg',
       img6:'https://www.dangao.com/proimgs/C-708039mdesC4.jpg',
+      number:1
     },
     {
       cakeid:4,
@@ -84,6 +87,7 @@ var cake = [
       img3:'https://www.dangao.com/proimgs/C-721018mdesC1.jpg',
       img4:'https://www.dangao.com/proimgs/C-721018mdesC2.jpg',
       img5:'https://www.dangao.com/proimgs/C-721018mdesC3.jpg',
+      number:1
     },
     {
       cakeid:5,
@@ -102,6 +106,7 @@ var cake = [
       img2:'https://www.dangao.com/proimgs/C-711002mdesB1.jpg',
       img3:'https://www.dangao.com/proimgs/C-711002mdesC1.jpg',
       img4:'https://www.dangao.com/proimgs/C-711002mdesC2.jpg',
+      number:1
     },
     {
       cakeid:6,
@@ -120,6 +125,7 @@ var cake = [
       img3:'https://www.dangao.com/proimgs/C-711687mdesC1.jpg',
       img4:'https://www.dangao.com/proimgs/C-711687mdesC2.jpg',
       img5:'https://www.dangao.com/proimgs/C-711687mdesC3.jpg',
+      number:1
     },
     {
       cakeid:7,
@@ -140,6 +146,7 @@ var cake = [
       img4:'https://www.dangao.com/proimgs/C-712001mdesC2.jpg',
       img5:'https://www.dangao.com/proimgs/C-712001mdesC3.jpg',
       img6:'https://www.dangao.com/proimgs/C-712001mdesC4.jpg',
+      number:1
     },
     {
       cakeid:8,
@@ -158,7 +165,8 @@ var cake = [
       img3:'https://www.dangao.com/proimgs/C-711701mdesC1.jpg',
       img4:'https://www.dangao.com/proimgs/C-711701mdesC2.jpg',
       img5:'https://www.dangao.com/proimgs/C-711701mdesC3.jpg',
-      ishot:'true'
+      ishot:'true',
+      number:1
     },
     {
       cakeid:9,
@@ -177,6 +185,7 @@ var cake = [
       img2:'https://www.dangao.com/proimgs/C-711004mdesB1.jpg',
       img3:'https://www.dangao.com/proimgs/C-711004mdesC1.jpg',
       img4:'https://www.dangao.com/proimgs/C-711004mdesC2.jpg',
+      number:1
     },
     {
       cakeid:10,
@@ -194,6 +203,7 @@ var cake = [
       img2:'https://www.dangao.com/proimgs/C-701731mdesB1.jpg',
       img3:'https://www.dangao.com/proimgs/C-701731mdesC1.jpg',
       img4:'https://www.dangao.com/proimgs/C-701731mdesC2.jpg',
+      number:1
     },
     {
       cakeid:11,
@@ -211,6 +221,7 @@ var cake = [
       img2:'https://www.dangao.com/proimgs/C-066219mdesB1.jpg',
       img3:'https://www.dangao.com/proimgs/C-066219mdesC1.jpg',
       img4:'https://www.dangao.com/proimgs/C-066219mdesC2.jpg',
+      number:1
     },
     {
       cakeid:12,
@@ -229,6 +240,7 @@ var cake = [
       img2:'https://www.dangao.com/proimgs/C-711003mdesB1.jpg',
       img3:'https://www.dangao.com/proimgs/C-711003mdesC1.jpg',
       img4:'https://www.dangao.com/proimgs/C-711003mdesC2.jpg',
+      number:1
     },
     {
       cakeid:13,
@@ -243,6 +255,7 @@ var cake = [
       img1:'https://www.dangao.com/proimgs/C-711686mdesA1.jpg',
       img2:'https://www.dangao.com/proimgs/C-711686mdesB1.jpg',
       img3:'https://www.dangao.com/proimgs/C-711686mdesC1.jpg',
+      number:1
     },
     {
       cakeid:14,
@@ -262,6 +275,7 @@ var cake = [
       img3:'https://www.dangao.com/proimgs/C-721032mdesC1.jpg',
       img4:'https://www.dangao.com/proimgs/C-721032mdesC2.jpg',
       img5:'https://www.dangao.com/proimgs/C-721032mdesC3.jpg',
+      number:1
     },
     {
       cakeid:15,
@@ -280,7 +294,8 @@ var cake = [
       img2:'https://www.dangao.com/proimgs/C-701709mdesB1.jpg',
       img3:'https://www.dangao.com/proimgs/C-701709mdesC1.jpg',
       img4:'https://www.dangao.com/proimgs/C-701709mdesC2.jpg',
-      ishot:'true'
+      ishot:'true',
+      number:1
     },
     {
       cakeid:16,
@@ -300,7 +315,8 @@ var cake = [
       img2:'https://www.dangao.com/proimgs/C-701715mdesB1.jpg',
       img3:'https://www.dangao.com/proimgs/C-701715mdesC1.jpg',
       img4:'https://www.dangao.com/proimgs/C-701715mdesC2.jpg',
-      iste:'true'
+      iste:'true',
+      number:1
     },
     {
       cakeid:17,
@@ -321,6 +337,7 @@ var cake = [
       img3:'https://www.dangao.com/proimgs/C-721030mdesC1.jpg',
       img4:'https://www.dangao.com/proimgs/C-721030mdesC2.jpg',
       img5:'https://www.dangao.com/proimgs/C-721030mdesC3.jpg',
+      number:1
     },
     {
       cakeid:18,
@@ -341,7 +358,8 @@ var cake = [
       img3:'https://www.dangao.com/proimgs/C-711667mdesC1.jpg',
       img4:'https://www.dangao.com/proimgs/C-711667mdesC2.jpg',
       img5:'https://www.dangao.com/proimgs/C-711667mdesC3.jpg',
-      isnew:'true'
+      isnew:'true',
+      number:1
     },
     {
       cakeid:19,
@@ -360,6 +378,7 @@ var cake = [
       img2:'https://www.dangao.com/proimgs/C-721006mdesB1.jpg',
       img3:'https://www.dangao.com/proimgs/C-721006mdesC1.jpg',
       img4:'https://www.dangao.com/proimgs/C-721006mdesC2.jpg',
+      number:1
     },
     {
       cakeid:20,
@@ -378,6 +397,7 @@ var cake = [
       img2:'https://www.dangao.com/proimgs/C-721053mdesB1.jpg',
       img3:'https://www.dangao.com/proimgs/C-721053mdesC1.jpg',
       img4:'https://www.dangao.com/proimgs/C-721053mdesC2.jpg',
+      number:1
     },
     {
       cakeid:21,
@@ -397,6 +417,7 @@ var cake = [
       img3:'https://www.dangao.com/proimgs/C-011197mdesC1.jpg',
       img4:'https://www.dangao.com/proimgs/C-011197mdesC2.jpg',
       img5:'https://www.dangao.com/proimgs/C-011197mdesC3.jpg',
+      number:1
     },
     {
       cakeid:22,
@@ -413,6 +434,7 @@ var cake = [
       img2:'https://www.dangao.com/proimgs/C-011169mdesB1.jpg',
       img3:'https://www.dangao.com/proimgs/C-011169mdesC1.jpg',
       img4:'https://www.dangao.com/proimgs/C-011169mdesC2.jpg',
+      number:1
     },
     {
       cakeid:23,
@@ -432,6 +454,7 @@ var cake = [
       img2:'https://www.dangao.com/proimgs/C-011201mdesB1.jpg',
       img3:'https://www.dangao.com/proimgs/C-011201mdesC1.jpg',
       img4:'https://www.dangao.com/proimgs/C-011201mdesC2.jpg',
+      number:1
     },
     {
       cakeid:24,
@@ -449,6 +472,7 @@ var cake = [
       img2:'https://www.dangao.com/proimgs/C-019116mdesB1.jpg',
       img3:'https://www.dangao.com/proimgs/C-019116mdesC1.jpg',
       img4:'https://www.dangao.com/proimgs/C-019116mdesC2.jpg',
+      number:1
     },
     {
       cakeid:25,
@@ -469,6 +493,7 @@ var cake = [
       img2:'https://www.dangao.com/proimgs/C-500337mdesB1.jpg',
       img3:'https://www.dangao.com/proimgs/C-500337mdesC1.jpg',
       img4:'https://www.dangao.com/proimgs/C-500337mdesC2.jpg',
+      number:1
     },
     {
       cakeid:26,
@@ -488,6 +513,7 @@ var cake = [
       img3:'https://www.dangao.com/proimgs/C-500338mdesC1.jpg',
       img4:'https://www.dangao.com/proimgs/C-500338mdesC2.jpg',
       img5:'https://www.dangao.com/proimgs/C-500338mdesC3.jpg',
+      number:1
     },
     {
       cakeid:27,
@@ -501,6 +527,7 @@ var cake = [
       url:'https://www.dangao.com/proimgs/709001175228.jpg',
       lun1:'https://www.dangao.com/imgpro/7090014201.jpg',
       img2:'https://www.dangao.com/imgpro/7090014201.jpg',
+      number:1
     },
     {
       cakeid:28,
@@ -515,6 +542,7 @@ var cake = [
       url:'https://www.dangao.com/proimgs/709002175228.jpg',
       lun1:'https://www.dangao.com/imgpro/7090024201.jpg',
       img2:'https://www.dangao.com/imgpro/7090024201.jpg',
+      number:1
     },
     {
       cakeid:29,
@@ -528,6 +556,7 @@ var cake = [
       url:'https://www.dangao.com/proimgs/709006175228.jpg',
       lun1:'https://www.dangao.com/imgpro/7090064201.jpg',
       img2:'https://www.dangao.com/imgpro/7090064201.jpg',
+      number:1
     },
     {
       cakeid:30,
@@ -542,6 +571,7 @@ var cake = [
       url:'https://www.dangao.com/proimgs/709007175228.jpg',
       lun1:'https://www.dangao.com/imgpro/7090074201.jpg',
       img2:'https://www.dangao.com/imgpro/7090074201.jpg',
+      number:1
     },
     {
       cakeid:31,
@@ -556,6 +586,7 @@ var cake = [
       url:'https://www.dangao.com/proimgs/709008175228.jpg',
       lun1:'https://www.dangao.com/imgpro/7090084201.jpg',
       img2:'https://www.dangao.com/imgpro/7090084201.jpg',
+      number:1
     },
     {
       cakeid:32,
@@ -570,6 +601,7 @@ var cake = [
       url:'https://www.dangao.com/proimgs/709009175228.jpg',
       lun1:'https://www.dangao.com/imgpro/7090094201.jpg',
       img2:'https://www.dangao.com/imgpro/7090094201.jpg',
+      number:1
     },
     {
       cakeid:33,
@@ -584,6 +616,7 @@ var cake = [
       url:'https://www.dangao.com/proimgs/709011175228.jpg',
       lun1:'https://www.dangao.com/imgpro/7090114201.jpg',
       img2:'https://www.dangao.com/imgpro/7090114201.jpg',
+      number:1
     },
     {
       cakeid:34,
@@ -678,11 +711,11 @@ conn.query(`select * from cake`,(err,result)=>{
 });
 
 /* GET home page. */
-var sql = `SELECT *
+router.get('/',(req,res)=>{
+  var sql = `SELECT *
               FROM classify_cake cc
               LEFT JOIN cake c ON  cc.cakeIid=c.cakeid
               LEFT JOIN classify cl ON cc.classifyId=cl.classifyId`;
-router.get('/',(req,res)=>{
   conn.query(sql,(err,result)=>{
     if(err){
       return res.send({
@@ -711,91 +744,63 @@ router.get('/type',(req,res)=>{
     });
   });
 });
-//购物车增加
+
 router.post('/',(req,res)=>{
-    console.log(req.body.cakeid,req.body.phone);
-    var dd = 1;
-    conn.query('select num from cart1 where cakeid = ? and phone = ?',[req.body.cakeid,req.body.phone],(err,result)=>{
-        if(result.length > 0){
-            var onum = new String(result[0].num);
-            var newnum = parseInt(onum[0]) + 1;
-            conn.query(`update cart1 set num = ? where cakeid = ? and phone = ?`,
-                [newnum,req.body.cakeid,req.body.phone],(err)=>{
-                    if(err){
-                        return res.send({
-                            success:false,
-                            data:err.message
-                        });
-                    }
-                    return res.send({
-                        success:true,
-                    });
-                });
-        }else{
-          conn.query("insert into cart1(cakeid,phone,num) values(?,?,?)",
-              [req.body.cakeid,req.body.phone,dd],(err)=>{
-              if(err){
-                  return res.send({
-                      success:false,
-                      data:err.message
-                  });
-              }
-              return res.send({
-                  success:true,
-              });
+
+  conn.query('select * from cart where cakeid = ? and phone = ?',
+    [req.body.cakeid,req.body.phone],
+    (err,result)=>{
+    console.log(result);
+    if(result.length > 0){
+      var num = parseInt(new String(result[0].number + 1));
+      console.log(num);
+      conn.query('update cart set number = ? where cakeid = ? and phone = ?',
+        [num,req.body.cakeid,req.body.phone],
+        (err,result)=>{
+        if(err){
+          return res.send({
+            success:false,
+            data:err.message
           });
         }
-    })
-});
-//购物车查询
-router.get('/cart?',(req,res)=>{
-  // console.log(req.query.userphone);
-    conn.query(`SELECT c.*,ct.num FROM cake c 
-          LEFT JOIN cart1 ct ON c.cakeid=ct.cakeid 
-          WHERE phone=?`,
-        [req.query.userphone],(err,result)=>{
+        return res.send({
+          success:true
+        });
+      });
+    }else{
+       conn.query('insert into cart set cakeid = ?,number = ?,phone = ?',
+        [req.body.cakeid,req.body.number,req.body.phone],(err,result)=>{
         if(err){
-            return res.send({
-                success:false,
-                data:err.message
-            });
+          return res.send({
+            success:false,
+            data:err.message
+          });
         }
         return res.send({
-            success:true,
-            data:result
+          success:true
         });
-    });
+      });
+    }
+
+  });
+ 
 });
-//购物车删除
-router.delete('/cart?',(req,res)=>{
-    // console.log(req.query.cakeid);
-    conn.query(`delete from cart1 where cakeid = ? and phone = ?`,
-        [req.query.cakeid,req.query.phone],(err)=>{
-            if(err){
-              return res.send({
-                  success:false,
-                  data:err.message
-              })
-            }
-            return res.send({
-                success:true,
-            })
-        })
-})
-//数量增加
-router.put('/num',(req,res)=>{
-    console.log(req.body);
-    conn.query(`update cart1 set num = ? where cakeid = ? and phone = ?`,
-              [req.body.num,req.body.cakeid,req.body.phone],(err)=>{
-      if(err){
-        return res.send({
-            success:false,
-            data:err.message,
-        })
-      }
+
+router.get('/cart',(req,res)=>{
+  var sql = `SELECT c.url,c.name,c.price,c.number FROM cart ca
+            LEFT JOIN cake c ON ca.cakeid = c.cakeid`;
+  conn.query(sql,(err,result)=>{
+    if(err){
       return res.send({
-          success:true,
-      })
+        success:false,
+        data:err.message
+      });
+    }
+    return res.send({
+      success:true,
+      data:result
     })
+  });
 })
+
 module.exports = router;

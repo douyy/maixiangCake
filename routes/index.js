@@ -6,7 +6,26 @@ var conn = require('../mysql/db');
 /* GET home page. */
 router.get('/',function(req,res){
     res.render('index', {
-      title: '麦香蛋糕'
+        title: '麦香蛋糕',
+    });
+});
+
+router.get('/b:c',function(req,res){
+    var sql = `select name,type from cake where name = ? or type = ?`;
+    console.log(req.params.c);
+    conn.query(sql,[req.params.c,req.params.c],(err,result)=>{
+       if(err){
+           return res.send({
+               success:false,
+               data:err.message
+           });
+       }else{
+           res.send({
+               success:true,
+               data:result
+           });
+
+       }
     });
 });
 router.get('/a', function(req, res, next) {

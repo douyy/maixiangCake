@@ -2,7 +2,7 @@ var express = require('express');
 //工厂函数
 var router = express.Router();
 //导入数据库的链接
-var conn = require('../mysql/cake')
+var conn = require('../mysql/cake');
 //导入
 router.get('/',(req,res)=>{
     let sql =` SELECT * FROM user`;
@@ -26,24 +26,24 @@ router.post('/',(req,res)=>{
     })
 });
 router.put('/user',(req,res)=>{
-	//请求body内容
-	console.log(req.body);
-	var sql = `UPDATE user 
+    //请求body内容
+    console.log(req.body);
+    var sql = `UPDATE user 
 			   SET ?  
 			   WHERE phone=?`;
-	conn.query(sql,[req.body,req.body.phone]
-		,(err,result)=>{
-		if (err) {
-			return res.json({success:false,data:err.message})
-		}
-		console.log(result);
-		if (result.affectedRows > 0) {
-			return res.json({success:true,data:result.inserPhone});
-		}
-		res.json({success:false,data:'插入失败'})
-	})
-	//res.send({data:req.body.id});
-})
+    conn.query(sql,[req.body,req.body.phone]
+        ,(err,result)=>{
+            if (err) {
+                return res.json({success:false,data:err.message})
+            }
+            console.log(result);
+            if (result.affectedRows > 0) {
+                return res.json({success:true,data:result.inserPhone});
+            }
+            res.json({success:false,data:'插入失败'})
+        })
+    //res.send({data:req.body.id});
+});
 router.put('/userpass',(req,res)=>{
     //请求body的内容
     console.log(req.body);
@@ -61,7 +61,7 @@ router.put('/userpass',(req,res)=>{
         }
         res.json({success:false,data:'插入失败'})
     })
-})
+});
 router.delete('/phone/:phone',(req,res)=>{
     //获取删除手机号
     var sql =`DELETE FROM user WHERE phone=?`;
@@ -74,7 +74,7 @@ router.delete('/phone/:phone',(req,res)=>{
         }
         res.send({success:true})
     })
-})
+});
 router.post('/u',(req,res)=>{
     //获取查询登录
     let sql =` SELECT * FROM user WHERE phone=? AND password=?`;
@@ -97,7 +97,7 @@ router.post('/u',(req,res)=>{
         }
 
     })
-})
+});
 router.post('/userphone',(req,res)=>{
     //获取查询个人信息
     console.log(req.body.phone)
@@ -122,7 +122,7 @@ router.post('/userphone',(req,res)=>{
         }
 
     })
-})
+});
 //新建收货人
 router.post('/adress',(req,res)=>{
     let sql = `INSERT INTO address SET ?`;
@@ -158,7 +158,7 @@ router.post('/lkads',(req,res)=>{
         }
 
     })
-})
+});
 //更新地址
 router.put('/updateads',(req,res)=>{
     //请求body内容
@@ -168,21 +168,21 @@ router.put('/updateads',(req,res)=>{
                WHERE id=?`;
     conn.query(sql,[req.body,req.body.id]
         ,(err,result)=>{
-        if (err) {
-            return res.json({success:false,data:err.message})
-        }
-        console.log(result);
-        if (result.affectedRows > 0) {
-            return res.json({success:true,data:result.inserPhone});
-        }
-        res.json({success:false,data:'插入失败'})
-    })
+            if (err) {
+                return res.json({success:false,data:err.message})
+            }
+            console.log(result);
+            if (result.affectedRows > 0) {
+                return res.json({success:true,data:result.inserPhone});
+            }
+            res.json({success:false,data:'插入失败'})
+        })
     //res.send({data:req.body.id});
-})
- //获取删除地址
+});
+//获取删除地址
 router.delete('/rmadress/:id',(req,res)=>{
     //获取删除
-     console.log(req.params);
+    console.log(req.params);
     var sql =`DELETE FROM address WHERE id=?`;
     conn.query(sql,[req.params.id,],(err,r)=>{
         if (err) {
@@ -193,5 +193,6 @@ router.delete('/rmadress/:id',(req,res)=>{
         }
         res.send({success:true})
     })
-})
+});
 module.exports = router;
+

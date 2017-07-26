@@ -52,7 +52,7 @@
         </div>
         <div class="sec_center">
             <form>
-                <input type="text"><span class="ss">搜索</span>
+                <div><input type="text"></div>
                 <p class="wz">
                     <span><a href="#">生日蛋糕</a></span>
                     <span><a href="#">巧克力蛋糕</a></span>
@@ -221,7 +221,7 @@
         })
     })
     appModule.controller('birthdayCtrl',function($scope,$http,$routeParams){
-       // console.log($routeParams.index);
+        console.log($routeParams.index);
         if($routeParams.index == 1){
             $scope.d = '生日蛋糕';
         }else if($routeParams.index == 2){
@@ -233,8 +233,8 @@
         }else if($routeParams.index == 5){
             $scope.d4 = '多层蛋糕';
         }
-        $http.get('/birthday').then(function(res){
-            //console.log(res.data.data);
+        $http.get('/birthday/birth').then(function(res){
+            console.log(res.data);
             if(res.data.success){
                 $scope.birthday = res.data.data;
             }
